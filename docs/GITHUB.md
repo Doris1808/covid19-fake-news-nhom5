@@ -1,30 +1,38 @@
 # Đưa dự án lên GitHub và làm việc nhóm
 
-## Lần đầu — Quân
+## Repository nhóm 5
 
-1. Giải nén, mở đúng thư mục `covid19-fake-news-nlp` trong VS Code.
-2. Trên GitHub tạo repository trống, ví dụ `covid19-fake-news-nlp`. Không thêm README tự động vì gói đã có.
-3. Mở Terminal của VS Code rồi chạy:
+Repository: https://github.com/Doris1808/covid19-fake-news-nhom5
+
+Chủ repository: Doris1808. Phụ trách DistilBERT: Lương Hoàng Bảo Quân — 24DH111520.
+
+Repo đã có mã nguồn trên nhánh `main`. Máy Mac của Quân đã kết nối Git và push thành công, không cần khởi tạo lại hoặc cấu hình lại email để tiếp tục.
+
+Sau khi sửa code trong thư mục dự án trên Mac:
 
 ```bash
-git init
-git add .
 git status
-git commit -m "Khoi tao do an NLP va pipeline DistilBERT"
-git branch -M main
-git remote add origin https://github.com/TEN_TAI_KHOAN/covid19-fake-news-nlp.git
-git push -u origin main
+git add .
+git commit -m "Cap nhat phan DistilBERT nhom 5"
+git push origin main
 ```
 
-Thay `TEN_TAI_KHOAN` bằng tài khoản thật. Nếu Git yêu cầu danh tính, đặt `git config user.name` và `git config user.email` bằng thông tin của bạn. Đăng nhập bằng luồng GitHub/VS Code; không đưa token vào code. Trước commit, xem `git status` và xác nhận không có dữ liệu riêng, checkpoint lớn hoặc thông tin bí mật.
+Xem danh sách file trong `git status` trước khi commit. Thư mục `.venv`, trọng số và checkpoint đã được loại khỏi Git bằng `.gitignore`.
+
+Nếu tải code trên máy mới:
+
+```bash
+git clone https://github.com/Doris1808/covid19-fake-news-nhom5.git
+cd covid19-fake-news-nhom5
+```
 
 ## Mời các thành viên
 
 Chủ repository thêm các bạn trong Settings → Collaborators. Mỗi bạn clone repo về, tạo nhánh riêng rồi bổ sung phần được giao:
 
 ```bash
-git clone https://github.com/TEN_TAI_KHOAN/covid19-fake-news-nlp.git
-cd covid19-fake-news-nlp
+git clone https://github.com/Doris1808/covid19-fake-news-nhom5.git
+cd covid19-fake-news-nhom5
 git switch -c feature/bert-ly
 # Sửa code, chạy kiểm tra, lưu kết quả của mình
 git add .
@@ -45,7 +53,7 @@ Trước khi sửa tiếp:
 ```bash
 git switch main
 git pull origin main
-git switch -c feature/ten-cong-viec-moi
+git switch -c feature/distilbert-quan
 ```
 
 Không dùng force push vào nhánh chung. Chỉ giải quyết conflict sau khi đọc thay đổi của cả hai bên.

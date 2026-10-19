@@ -1,14 +1,14 @@
 # Chạy phần DistilBERT
 
-## 1. Đưa code lên GitHub trước
+## 1. Repository đã có mã nguồn
 
-Giải nén gói, mở thư mục `covid19-fake-news-nlp` bằng VS Code và làm theo `GITHUB.md`. Không đưa nguyên file ZIP lên thay cho mã nguồn. Ghi lại URL repository để thay trong notebook.
+Repository nhóm 5: https://github.com/Doris1808/covid19-fake-news-nhom5. Notebook đã dùng sẵn địa chỉ này. Mac của Quân đã cài thư viện và mở được giao diện Streamlit.
 
 ## 2. Mở notebook trên Kaggle
 
 1. Tạo notebook rồi import `notebooks/01_DistilBERT_Kaggle.ipynb`.
 2. Bật Internet để tải code, dữ liệu và mô hình. Chọn GPU nếu tài khoản được cấp; xác minh tài khoản nếu Kaggle yêu cầu. Nếu không có GPU, có thể chuyển notebook sang Colab và đổi đường dẫn làm việc.
-3. Chạy ô clone code sau khi thay `REPO_URL` bằng URL của bạn. Hướng dẫn clone này dành cho repository public. Với private repo, tải code lên dạng Kaggle Dataset riêng rồi copy sang `/kaggle/working`; không ghi token trong notebook.
+3. Chạy ô clone code; `REPO_URL` đã trỏ tới repo của nhóm 5. Hướng dẫn clone này dành cho repository public. Với private repo, tải code lên dạng Kaggle Dataset riêng rồi copy sang `/kaggle/working`; không ghi token trong notebook.
 4. Cài thư viện. Nếu notebook yêu cầu khởi động lại kernel, restart rồi chạy lại ô thiết lập đường dẫn trước khi đi tiếp.
 5. Chạy kiểm tra GPU, tải CSV và EDA. Xem nhãn, số dòng và cảnh báo dữ liệu trùng.
 6. Chạy smoke một lần. Kiểm tra có `model/`, `metrics.json` và `completed.flag` trong `outputs/smoke/seed_42/`.

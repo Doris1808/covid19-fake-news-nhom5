@@ -22,8 +22,8 @@ Chưa kèm dữ liệu thô, trọng số hoặc kết quả fine-tune. Có code
 
 ### Bắt đầu
 
-1. Làm theo [hướng dẫn GitHub](docs/GITHUB.md) để tạo repository.
-2. Mở [notebook DistilBERT](notebooks/01_DistilBERT_Kaggle.ipynb) trên Kaggle, sửa URL repository.
+1. Mã nguồn của nhóm: https://github.com/Doris1808/covid19-fake-news-nhom5. Xem [hướng dẫn GitHub](docs/GITHUB.md) để tải về hoặc cập nhật.
+2. Mở [notebook DistilBERT](notebooks/01_DistilBERT_Kaggle.ipynb) trên Kaggle; link repository đã được điền sẵn.
 3. Chạy thử, rồi train lần lượt seed `42`, `123`, `2024`.
 4. Tải kết quả về và chạy giao diện trên Mac theo [hướng dẫn](docs/KAGGLE_VA_MAC.md).
 
