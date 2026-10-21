@@ -6,7 +6,7 @@ Cập nhật theo minh chứng thực tế trước buổi báo cáo. Tình tr�
 |---|---|---|---|
 | Vũ Hồng Huy | Bài báo, EDA, baseline A, zero-shot B | Có mã EDA hỗ trợ; chưa có code A/B và số liệu thực chạy | Notebook A/B, JSON metric, thống kê CSV |
 | Lương Hoàng Bảo Quân | DistilBERT, 3 seed, thời gian/GPU | Đã push GitHub và mở giao diện Streamlit trên Mac; đã import notebook Kaggle; chưa có seed hoàn tất được xác nhận | Checkpoint, metrics, environment, log |
-| Đặng Thị Trúc Ly | BERT-base, 3 seed, phân tích lỗi | Chừa thư mục để tích hợp; chưa có kết quả | Code, config, log, checkpoint |
+| Đặng Thị Trúc Ly | BERT-base, 3 seed, phân tích lỗi | Đã chạy xong 3 seed (F1 cao nhất đạt 0.9808 ở Seed 2024), hoàn tất phân tích lỗi | Đã push code .ipynb, config (checkpoint-804), log và README hoàn chỉnh tại thư mục `members/ly_bert` |
 | Lê Nguyễn Ngọc Bình | RoBERTa-base, 3 seed, demo | Chừa thư mục; có khung demo chung dùng DistilBERT | Code, log, checkpoint, demo hoàn chỉnh |
 
 Không suy ra phần trăm hoàn thành từ việc có sẵn file code. Nhóm tự cập nhật phần trăm kèm tiêu chí: setup, chạy thử, các seed, đánh giá và phân tích.
