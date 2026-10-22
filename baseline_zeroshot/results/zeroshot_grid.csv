@@ -1,0 +1,19 @@
+model,labelset,template,val_acc,val_f1w
+facebook/bart-large-mnli,reliable_misinfo,The following post is {}.,0.682,0.6644779635948467
+facebook/bart-large-mnli,true_false,This text is {}.,0.682,0.6616610547002948
+facebook/bart-large-mnli,reliable_misinfo,This text is {}.,0.672,0.6430671256454389
+valhalla/distilbart-mnli-12-3,reliable_misinfo,This text is {}.,0.676,0.6416331360946745
+facebook/bart-large-mnli,true_false,The following post is {}.,0.668,0.6306499999999999
+valhalla/distilbart-mnli-12-3,true_false,This text is {}.,0.652,0.6081109123434706
+valhalla/distilbart-mnli-12-3,reliable_misinfo,The following post is {}.,0.648,0.6010701899256813
+facebook/bart-large-mnli,reliable_misinfo,This is {}.,0.644,0.5991019677996422
+valhalla/distilbart-mnli-12-3,real_fake,This text is {}.,0.652,0.596048794588657
+valhalla/distilbart-mnli-12-3,reliable_misinfo,This is {}.,0.634,0.5945983143626726
+valhalla/distilbart-mnli-12-3,true_false,This is {}.,0.642,0.5851864887606684
+valhalla/distilbart-mnli-12-3,real_fake,The following post is {}.,0.642,0.5806076144034185
+facebook/bart-large-mnli,true_false,This is {}.,0.632,0.5728332080707637
+valhalla/distilbart-mnli-12-3,true_false,The following post is {}.,0.622,0.5484948324459756
+valhalla/distilbart-mnli-12-3,real_fake,This is {}.,0.618,0.5380454373686836
+facebook/bart-large-mnli,real_fake,This text is {}.,0.612,0.5215177865612649
+facebook/bart-large-mnli,real_fake,The following post is {}.,0.608,0.5165849802371543
+facebook/bart-large-mnli,real_fake,This is {}.,0.59,0.4812233386775032

@@ -1,0 +1,9 @@
+model,stats,vec,params,val_f1w,test_f1w
+DecisionTree,False,bi_min2,"{""max_depth"": 50}",0.883,0.8844
+DecisionTree,True,uni_min2,"{""max_depth"": 50}",0.8919,0.8807
+LinearSVC,False,bi_min2_nosub,"{""C"": 5}",0.9448,0.9486
+LinearSVC,True,bi_min2_nosub,"{""C"": 1}",0.9472,0.9491
+LogReg,False,bi_min2_nosub,"{""C"": 100}",0.9444,0.9444
+LogReg,True,bi_min2,"{""C"": 100}",0.9448,0.9467
+NaiveBayes,False,bi_min2,"{""alpha"": 0.1}",0.9313,0.929
+NaiveBayes,True,bi_min2,"{""alpha"": 0.1}",0.9346,0.9299

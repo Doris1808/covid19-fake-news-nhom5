@@ -1,0 +1,37 @@
+Cấu hình phân tích: LinearSVC, C = 1, vectorizer = bi_min2_nosub, stats = True
+              precision    recall  f1-score   support
+
+        real     0.9526    0.9500    0.9513      1120
+        fake     0.9453    0.9480    0.9466      1020
+
+    accuracy                         0.9491      2140
+   macro avg     0.9489    0.9490    0.9490      2140
+weighted avg     0.9491    0.9491    0.9491      2140
+
+TP=967  FN=53 (tin giả bị bỏ sót)  FP=56 (tin thật bị báo oan)  TN=1064
+
+Từ đẩy về REAL: ['rt', 'alexismadrigal', 'drtedros', 'data', 'states', 'numbers', 'cases', 'testing', 'restrictions', 'tests', 'today', 'stat_n_words', 'amp', 'via', 'indiafightscorona', 'covid19', 'level', 'second', 'risk', 'tested']
+Từ đẩy về FAKE: ['coronavirus', 'trump', 'news', 'corona', 'coronavirusfacts', 'fact', 'covid 19', '19', 'claim', 'the coronavirus', 'realdonaldtrump', 'factcheck', 'virus', 'stat_n_exclaim', 'coronavirusfacts https', 'pandemic', 'false', 'misinformation', 'president', 'he']
+
+Tỉ lệ sai theo độ dài (số mẫu, tỉ lệ sai):
+            count    mean
+len_bucket               
+<=10          189  0.0688
+11-20         654  0.0627
+21-40         924  0.0498
+41-80         367  0.0245
+>80             6  0.0000
+
+Tỉ lệ sai theo có link:
+          count    mean
+has_link               
+False      1043  0.0182
+True       1097  0.0820
+
+Tỉ lệ sai theo có dấu '!':
+             count    mean
+has_exclaim               
+False         2060  0.0519
+True            80  0.0250
+
+Đã lưu 109 mẫu sai vào results/baseline_errors.csv. Hãy đọc tay khoảng 50 mẫu, gom thành các nhóm lỗi và đếm số mẫu mỗi nhóm.

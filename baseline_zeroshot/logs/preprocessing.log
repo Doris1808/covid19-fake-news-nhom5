@@ -1,0 +1,53 @@
+0. Gốc (mặc định của TfidfVectorizer) | SVM (C=1) val_f1w=0.9439
+0. Gốc (mặc định của TfidfVectorizer) | LogReg (C=100) val_f1w=0.9444
+1. Giữ nguyên chữ hoa/thường | SVM (C=1) val_f1w=0.9481
+1. Giữ nguyên chữ hoa/thường | LogReg (C=100) val_f1w=0.9462
+2. Giải mã thực thể HTML (&amp; ...) | SVM (C=1) val_f1w=0.9444
+2. Giải mã thực thể HTML (&amp; ...) | LogReg (C=100) val_f1w=0.9453
+3. Link thay bằng token URL | SVM (C=1) val_f1w=0.9448
+3. Link thay bằng token URL | LogReg (C=100) val_f1w=0.9430
+4. Bỏ hẳn link | SVM (C=1) val_f1w=0.9407
+4. Bỏ hẳn link | LogReg (C=100) val_f1w=0.9402
+5. Bỏ tiền tố RT @user: | SVM (C=1) val_f1w=0.9397
+5. Bỏ tiền tố RT @user: | LogReg (C=100) val_f1w=0.9406
+6. @mention thay bằng token USER | SVM (C=1) val_f1w=0.9425
+6. @mention thay bằng token USER | LogReg (C=100) val_f1w=0.9387
+7. Tách hashtag ghép (#StayAtHome) | SVM (C=1) val_f1w=0.9434
+7. Tách hashtag ghép (#StayAtHome) | LogReg (C=100) val_f1w=0.9415
+8. Bỏ ký tự non-ASCII (emoji, ngoặc cong...) | SVM (C=1) val_f1w=0.9439
+8. Bỏ ký tự non-ASCII (emoji, ngoặc cong...) | LogReg (C=100) val_f1w=0.9434
+9. Bỏ stop-word tiếng Anh | SVM (C=1) val_f1w=0.9435
+9. Bỏ stop-word tiếng Anh | LogReg (C=100) val_f1w=0.9402
+10. Tổ hợp bước 2, 3, 5, 6, 7 | SVM (C=1) val_f1w=0.9420
+10. Tổ hợp bước 2, 3, 5, 6, 7 | LogReg (C=100) val_f1w=0.9439
+11. Tổ hợp bước 10 + bỏ stop-word | SVM (C=1) val_f1w=0.9416
+11. Tổ hợp bước 10 + bỏ stop-word | LogReg (C=100) val_f1w=0.9355
+
+=== Ảnh hưởng của từng bước tiền xử lý (so với bản gốc) ===
+                                    biến thể        mô hình  số đặc trưng  val_f1w  test_f1w  Δ val (điểm)  Δ test (điểm)
+       0. Gốc (mặc định của TfidfVectorizer)      SVM (C=1)         26129   0.9439    0.9472        0.0000         0.0000
+       0. Gốc (mặc định của TfidfVectorizer) LogReg (C=100)         26129   0.9444    0.9444        0.0000         0.0000
+                1. Giữ nguyên chữ hoa/thường      SVM (C=1)         26957   0.9481    0.9561        0.4177         0.8877
+                1. Giữ nguyên chữ hoa/thường LogReg (C=100)         26957   0.9462    0.9514        0.1851         0.7024
+        2. Giải mã thực thể HTML (&amp; ...)      SVM (C=1)         26040   0.9444    0.9481        0.0458         0.0938
+        2. Giải mã thực thể HTML (&amp; ...) LogReg (C=100)         26040   0.9453    0.9439        0.0939        -0.0463
+                 3. Link thay bằng token URL      SVM (C=1)         25838   0.9448    0.9481        0.0935         0.0935
+                 3. Link thay bằng token URL LogReg (C=100)         25838   0.9430    0.9439       -0.1397        -0.0460
+                              4. Bỏ hẳn link      SVM (C=1)         25411   0.9407    0.9337       -0.3225        -1.3529
+                              4. Bỏ hẳn link LogReg (C=100)         25411   0.9402    0.9336       -0.4161        -1.0730
+                     5. Bỏ tiền tố RT @user:      SVM (C=1)         26055   0.9397    0.9406       -0.4202        -0.6550
+                     5. Bỏ tiền tố RT @user: LogReg (C=100)         26055   0.9406    0.9402       -0.3726        -0.4202
+            6. @mention thay bằng token USER      SVM (C=1)         25926   0.9425    0.9481       -0.1416         0.0935
+            6. @mention thay bằng token USER LogReg (C=100)         25926   0.9387    0.9453       -0.5616         0.0938
+          7. Tách hashtag ghép (#StayAtHome)      SVM (C=1)         26155   0.9434    0.9509       -0.0481         0.3749
+          7. Tách hashtag ghép (#StayAtHome) LogReg (C=100)         26155   0.9415    0.9430       -0.2806        -0.1401
+8. Bỏ ký tự non-ASCII (emoji, ngoặc cong...)      SVM (C=1)         26129   0.9439    0.9472        0.0003        -0.0003
+8. Bỏ ký tự non-ASCII (emoji, ngoặc cong...) LogReg (C=100)         26129   0.9434    0.9448       -0.0932         0.0466
+                   9. Bỏ stop-word tiếng Anh      SVM (C=1)         17174   0.9435    0.9486       -0.0441         0.1414
+                   9. Bỏ stop-word tiếng Anh LogReg (C=100)         17174   0.9402    0.9467       -0.4169         0.2350
+               10. Tổ hợp bước 2, 3, 5, 6, 7      SVM (C=1)         25537   0.9420    0.9444       -0.1860        -0.2793
+               10. Tổ hợp bước 2, 3, 5, 6, 7 LogReg (C=100)         25537   0.9439    0.9407       -0.0448        -0.3716
+           11. Tổ hợp bước 10 + bỏ stop-word      SVM (C=1)         16657   0.9416    0.9379       -0.2322        -0.9318
+           11. Tổ hợp bước 10 + bỏ stop-word LogReg (C=100)         16657   0.9355    0.9393       -0.8871        -0.5119
+
+Ghi nhớ: chênh dưới khoảng 1 điểm F1 nằm trong sai số đo lường, chưa đủ để kết luận bước đó có ích.

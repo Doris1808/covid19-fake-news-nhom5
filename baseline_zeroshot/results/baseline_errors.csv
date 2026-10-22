@@ -1,0 +1,133 @@
+error_type,label,pred,n_words,has_link,has_exclaim,text
+FN (fake bị đoán real),1,0,38,True,False,"🤝 As business continue to adapt their services in the wake of covid-19, the SWA Hand Sanitiser Portal is available for sourcing #handsanitiser and ethanol for producing sanitiser.
+
+🖊️ Complete your details and find suppliers here: https://t.co/b7uLQbfQLz https://t.co/5qJQ5h8w6l"
+FN (fake bị đoán real),1,0,28,True,False,We fact-checked a range of statements from the second night of #DNC2020. Here are highlights dealing with coronavirus case numbers and the #TrumpAdministration’s position on the #ACA. https://t.co/bKhYJteUmf
+FN (fake bị đoán real),1,0,21,True,False,Bechara Covid19 se down hai else he would have give a nice acceptance speech. Dad this is for you https://t.co/8yZfJ0TK6V https://t.co/3rnfijiwOb
+FN (fake bị đoán real),1,0,16,True,False,#Florida smashes record for most new COVID-19 cases any state has in a single day https://t.co/gqtofPbOAd
+FP (real bị đoán fake),0,1,29,False,False,*DNA Vaccine: injecting genetic material into the host so that host cells create proteins that are similar to those in the virus against which the host then creates antibodies
+FN (fake bị đoán real),1,0,13,True,False,Lockdown forcing woman to realise just how bad her diet is https://t.co/fYtkbIlgjD https://t.co/HbbuhBEWXG
+FP (real bị đoán fake),0,1,22,True,False,Enanthem in a patient with a skin rash is a useful finding to help diagnose COVID-19 Spanish medical experts suggest. https://t.co/L0tB45oqk0 https://t.co/zbrKAX073H
+FP (real bị đoán fake),0,1,26,True,False,@sandylocks is a celebrated legal scholar. She’s been hosting Under the Blacklight at the @AAPolicyForum to look at “the intersectional vulnerabilities that COVID lays bare.” https://t.co/QGrwVHYbmM
+FP (real bị đoán fake),0,1,18,True,False,Labour leader Sir Keir Starmer is self-isolating after a member of his household displayed possible #coronavirus symptoms https://t.co/KsswY6k5Oz
+FN (fake bị đoán real),1,0,39,True,False,This year Election Night could be chaotic. In addition to coping with an unprecedented number of mail ballots COVID requires election officials to provide clean socially distanced in-person voting and grapple with a likely shortage of election workers. https://t.co/ZTe3utWuFp
+FN (fake bị đoán real),1,0,12,True,False,"Local badass only washes hands for 15 seconds #handwashing #CoronaLockdown 
+https://t.co/pbWtYGBYYa https://t.co/2LJhHYcnpB"
+FP (real bị đoán fake),0,1,27,True,False,"Donald Trump has claimed he ""up-played"" the seriousness of the coronavirus pandemic - despite admitting earlier this year he had ""wanted to always play it down"" https://t.co/wEgnnZzrNW"
+FP (real bị đoán fake),0,1,8,True,False,3 stages to COVID brain damage identified. https://t.co/UWEHkMD7Z7
+FP (real bị đoán fake),0,1,23,False,False,“She drew a difference between these protests against police brutality and the protests earlier this spring which opposed mask mandates and social-distancing rules.”
+FN (fake bị đoán real),1,0,19,True,False,"Nation's moms form vigilante gang to make sure you get that cough checked out
+
+https://t.co/rFgS6n0lum #ColdAndFlu #Winter #Coronavid19 https://t.co/m7JKPvx6Xo"
+FP (real bị đoán fake),0,1,16,True,False,#BillGates is shocked that America’s pandemic response is “among the worst in the world.https://t.co/mQmubG97rg via @WebMD
+FP (real bị đoán fake),0,1,9,True,False,85% of American adults believe in wearing masks. https://t.co/ec76ZcWOvu
+FP (real bị đoán fake),0,1,35,False,False,The highlights of the new nationwide measures are as follows; 1) There will be an overnight curfew from 8pm to 6am. This means all movement will be prohibited during this period except essential services; #TakeResponsibility
+FP (real bị đoán fake),0,1,15,True,False,Coronavirus: 'Chaos' as drivers queue for hours for COVID-19 tests before being turned away https://t.co/VQSlcel47P
+FN (fake bị đoán real),1,0,17,True,False,Early action and social trust are among the reasons for Vermont’s low numbers of coronavirus cases. https://t.co/lQzAsc6gSG
+FP (real bị đoán fake),0,1,21,True,False,The COVID-19 pandemic has led to a 123% surge in opioid overdose deaths in one hospital a new study confirms. https://t.co/zeldxtekoK
+FP (real bị đoán fake),0,1,11,True,False,H1N1 holds lessons for an efficient delivery of COVID vaccination. https://t.co/FZ5N6cXdqh
+FN (fake bị đoán real),1,0,44,True,False,Florida Gov. Ron DeSantis said today kids are not a major vector of spreading COVID-19. Studies show that high schoolers are more like adults while young children present a lower risk. But findings overseas may not apply to U.S. states with rising cases. https://t.co/hDLIVdcaKw
+FN (fake bị đoán real),1,0,45,True,False,"@geoallison Today's official figures.
+
+A recent BMJ review used a False Positive rate of 5%.
+
+Public Health England came up with slightly under 2%.
+
+A German study found false positive rates rose from 1.4% to 2.2%-7.6% when a Hcov was present (alpha and betacoronaviruses) https://t.co/bIW6oNiynW"
+FN (fake bị đoán real),1,0,21,True,False,We're LIVE talking about COVID-19 (a vaccine transmission) with @drsanjaygupta. Join us and ask some questions of your own: https://t.co/e16G2RGdkA https://t.co/Js7lemT1Z6
+FN (fake bị đoán real),1,0,14,True,False,Tens of Thousands of People Are Moving To Laos https://t.co/fbF6YrPMeH #coronavirus #brazil #laos #amazonjungle
+FP (real bị đoán fake),0,1,13,True,False,Scientists ask: Without trial data how can we trust Russia's #COVID vaccine?https://t.co/gArcUf0Pji https://t.co/0bdcA7lf56
+FP (real bị đoán fake),0,1,10,True,False,Brazil is a worrying combination of pandemic and pandemonium. https://t.co/4AIKrkMWlT
+FN (fake bị đoán real),1,0,43,True,False,A paper estimating that 266796 COVID-19 cases could be linked to a motorcycle rally in South Dakota took off online. Experts agreed that the rally had the makings of a superspreading event but warned that 266796 cases may be an overestimate. https://t.co/IQELknUnSJ https://t.co/FGRu8Ydi3q
+FP (real bị đoán fake),0,1,11,True,False,Insurers and states look to reduce med-mal premiums during COVID-19. https://t.co/W1XpJMyjIW
+FP (real bị đoán fake),0,1,7,True,False,Coronavirus is accelerating Medicare’s money problems. https://t.co/3WtpIzd6XN
+FN (fake bị đoán real),1,0,59,True,False,"@BorisJohnson PM I think it's about time the Public were told the truth about the origin of this virus please . Some of us suspect it is a biological weapon created in a Chinese Lab , so please come clean so everyone can then know how serious this crisis is &amp; we can all unite &amp; fight #Covid19 https://t.co/8RvT0SyEen"
+FN (fake bị đoán real),1,0,49,True,False,"""Lately we have about 8 to 10 bodies a day, but one time we had 18 bodies,"" says the head of one of the few crematoriums on Bali designated to deal with the bodies of people who died with confirmed or suspected cases of #COVID19. Report by @AnneBarker. https://t.co/ByAenJ7EmN"
+FP (real bị đoán fake),0,1,10,True,False,Equity accuracy and quality questions surround the #coronavirus vaccine. https://t.co/8wxtD76czo
+FN (fake bị đoán real),1,0,69,False,False,The overall lethality of COVID-19 (infection fatality rate) is about 0.1% to 0.3% and thus in the range of a severe influenza; up to 60% of all persons may already have a certain cellular background immunity to the new coronavirus due to contact with previous coronaviruses (i.e. cold viruses); there is still little to no scientific evidence for the effectiveness of cloth face masks in healthy and asymptomatic individuals
+FN (fake bị đoán real),1,0,11,True,False,"We cannot return to Ed Sheeran post-coronavirus, warn experts https://t.co/93gtFHTslc https://t.co/zKxl00k0VT"
+FN (fake bị đoán real),1,0,39,True,False,The physicians in the video seen by millions are associated with a group called America’s Frontline Doctors which advocates against official narratives of COVID19. All of the physicians have a history of making unproven or conspiratorial medical claims. https://t.co/P0bVb4TOrG
+FN (fake bị đoán real),1,0,16,False,False,A ???face mask exempt card??� allows you to cite the ADA and not wear a mask.
+FP (real bị đoán fake),0,1,11,True,False,Younger COVID-19 patients are harder to track than their elders. https://t.co/kWP3fGWzqy
+FP (real bị đoán fake),0,1,12,True,False,Coronavirus: Colleges drop courses including languages and maths amid financial pressure https://t.co/G0oG2sxGuB
+FP (real bị đoán fake),0,1,24,True,False,"Antonio Guterres said the #coronavirus pandemic has shown how ""vulnerable we are"" and that in some aspects ""we are moving 25 years back"" https://t.co/NAZlNcscv8"
+FP (real bị đoán fake),0,1,10,True,False,Recommendations for treating colorectal cancer during the COVID-19 pandemic. https://t.co/upz96NACua
+FP (real bị đoán fake),0,1,13,True,False,Coronavirus: Donald Trump ignores COVID-19 rules with 'reckless and selfish' indoor rally https://t.co/JsiHGLMwfO
+FP (real bị đoán fake),0,1,6,True,False,Florida tops 100K coronavirus cases. https://t.co/QTjPms3cCW
+FP (real bị đoán fake),0,1,7,True,False,Chronic COVID-19 has long-lasting health effects. https://t.co/cgYxkj1u6t
+FP (real bị đoán fake),0,1,53,False,False,@sejwatson For example if you've got a cold cough or other respiratory symptoms and the COVID-19 virus is picked up as a weak positive in a PCR test. In all these cases the test result is often a ‘weak positive’ and the CT value of the person’s PCR test suggests an old infection.
+FN (fake bị đoán real),1,0,18,True,False,For its must-read coronavirus coverage The Atlantic is rewarded with a huge surge of digital subscriptions https://t.co/gN8gA1uSds https://t.co/TdvwbRpxNm
+FP (real bị đoán fake),0,1,8,True,False,MIS-C in pediatric coronavirus still a puzzle. https://t.co/LSl3pvX8OP
+FN (fake bị đoán real),1,0,40,True,False,While cases are still rising there should be a study on the patients who consumed Arsenicum Album-30 distributed by state health department in Gujarat. A probe should be done if any of them were diagnosed with covid 19 later. https://t.co/j3SfvkyP21
+FN (fake bị đoán real),1,0,24,True,False,Once covid’a over I’m going to PNG(Papua New Guinea) and getting a visible crocodile skin tattoo so my mom will ever know https://t.co/NjnQKyrjnf https://t.co/OW1UcfCdfJ
+FP (real bị đoán fake),0,1,14,True,False,#Coronavirus vaccine is ready to ship as soon as the FDA approves it. https://t.co/keRptUKV33
+FN (fake bị đoán real),1,0,23,True,False,"Human coronavirus infections peak in December-March. Betacoronaviruses seem to peak in January:
+
+https://t.co/oBqaGfmihr
+
+Related: Elsevier is paywalling some coronavirus articles again. 😏 https://t.co/BI2MXFHLNH"
+FN (fake bị đoán real),1,0,17,True,False,Group hanging out in park presumably celebrating the blood on their hands https://t.co/GfdLl89acR #stayathomesavelives #LockdownNow #vancouver https://t.co/x4zqmBqTxx
+FP (real bị đoán fake),0,1,24,True,False,At the height of the COVID-19 pandemic in New York City first responders faced nearly triple the number of calls for cardiac arrest. https://t.co/EZ94vInEqv
+FN (fake bị đoán real),1,0,21,True,False,RT @Poynter: Remember no coronavirus vaccine is ready for the market. Here are the vaccines that are the furthest along https://t.co/f6Mso…
+FN (fake bị đoán real),1,0,35,True,True,"ಕಲ್ಬುರ್ಗಿಯಲ್ಲಿ ಮಾತ್ರವಲ್ಲ ದೇಶದ 29ಲ. COVID19 ಸೋಂಕಿತರು, 138ಕೋ. ಜನತೆ ಆರ್ಥಿಕ ಸಂಕಷ್ಟದಲ್ಲಿರುವಾಗ ಸೋಂಕಿತರನ್ನು ""ದರೋಡೆ"" ಮಾಡಿದವರು ಖಾಸಗಿ ಆಸ್ಪತ್ರೆಯ ಆಡಳಿತ ..! ಇದಕ್ಕೆ ಮೂಲ ಕಾರಣವೇ ಅಧಿಕಾರದಲ್ಲಿರುವ ಭಂಡರು..C ಸೋಂಕು ಎಂದು ಸುಳ್ಳು ಹೇಳಿ ಆಸ್ಪತ್ರೆಗಳು ಲೂಟಿ ಮಾಡಿದ್ದೂ ಇವೆ. @PMOIndia @mla_sudhakar @drharshvardhan https://t.co/d3mryULQvz https://t.co/JGyoOT8XNi"
+FP (real bị đoán fake),0,1,10,True,False,Coronavirus: Franchising 'ended' as government seeks new rail future https://t.co/5nvG1RYZad
+FN (fake bị đoán real),1,0,18,True,False,Nashville Woman Encouraged to Learn Obesity Alone Does Not Appear to Increase Risk for COVID-19 Mortality https://t.co/4GkCFnBR9j #health
+FN (fake bị đoán real),1,0,35,True,False,"A first vaccine, while a welcome tool in fighting COVID-19, may turn out to be of limited use. The lesson learned from AIDS is the value of building a scientific infrastructure beyond a vaccine. https://t.co/WKh648qSLG"
+FN (fake bị đoán real),1,0,27,False,False,"#UK's #PrinceCharles was cured of #Covid19 through ayurveda and homeopathy treatment from a #Bengaluru-based holistic resort, Union Minister of State for AYUSH Shripad Naik claimed on Thursday."
+FN (fake bị đoán real),1,0,22,False,False,Government's roadmap to ease Covid-19 restrictions will be set out in 5 phases. These phases will be on 3 week review process.
+FP (real bị đoán fake),0,1,24,False,False,RT @Google: 5 ways to help cope with stress during COVID-19: 1️⃣ PAUSE. Breathe. Notice how you feel 2️⃣ TAKE BREAKS from COVID-19 content…
+FP (real bị đoán fake),0,1,17,True,False,Coronavirus: Boris Johnson reveals new COVID rules on face masks fines pubs and working from home https://t.co/kd697pjmAF
+FP (real bị đoán fake),0,1,16,True,False,Hundreds of doctors won’t start their residencies on time leaving the COVID front line understaffed. https://t.co/BjeludAbz3
+FP (real bị đoán fake),0,1,20,True,False,T-cell response may offer a more precise measure of potential long-term immune protection from COVID compared with antibody assays. https://t.co/we8J8IDv6B
+FP (real bị đoán fake),0,1,26,False,False,This morning WHO Director-General Dr Tedros has emphasised that while a number of vaccines are in clinical trials there is currently no silver bullet for COVID-19.
+FN (fake bị đoán real),1,0,33,True,False,"Corona patients have started appearing in public places on the streets of Pune 😢
+The situation is dire, kindly please take care of yourself and your family
+Stay safe ...🙏🏻
+#corona #pune https://t.co/Qr7UWBEyW5"
+FP (real bị đoán fake),0,1,22,False,False,RT @WIONews: We have asked World Health Organization (WHO) for 1 million coronavirus test kits says ICMR D-G Dr Balram Bhargava #Coronavi…
+FP (real bị đoán fake),0,1,21,True,False,"A second #coronavirus lockdown would be a ""government failure - not an act of god"" Sir Keir Starmer has said https://t.co/3lTuQDPmL0"
+FN (fake bị đoán real),1,0,14,True,False,New mask exemption card indicates medical condition of being an asshole #COVID19 https://t.co/ajI0KymHyU https://t.co/h0Jxkn5BLz
+FN (fake bị đoán real),1,0,14,True,False,"Home gyms struggle to retain members after early-pandemic trial period ends #Gyms
+https://t.co/SKfG22mqbl https://t.co/01jt1s5T8a"
+FP (real bị đoán fake),0,1,9,True,False,Abuse-deterrent oxycontin will not solve the opioid epidemic. https://t.co/kWwzGpNmie
+FN (fake bị đoán real),1,0,10,True,False,#FactChecking : Has #Israel already discovered a #COVID19 vaccine? https://t.co/JPTkvwVyul
+FP (real bị đoán fake),0,1,12,True,False,Why did #SARS go away while today’s #coronavirus keeps on spreading? https://t.co/KexrtHwuE4
+FP (real bị đoán fake),0,1,18,True,False,Doctors send a crystal clear message about the importance of masks for COVID prevention. https://t.co/c5jxs3lavy via @HansaBhargavaMD @@FutureDocs
+FP (real bị đoán fake),0,1,22,True,False,Sir Patrick Vallance told a Downing Street briefing that the number of new COVID-19 cases was doubling roughly every seven days https://t.co/5rAz2V6Coi
+FP (real bị đoán fake),0,1,12,True,False,CTO is an important new MD title created to address coronavirus. https://t.co/pkAFLapIjY
+FN (fake bị đoán real),1,0,38,True,False,"Deaths due to Covid have increased in Gujarat's Rajkot as cases rise. However, the exact number is unclear. City data shows 131 deaths, but crematoriums &amp; burial grounds tell a different story. 
+
+ThePrint's @soniyaagrawal21 &amp; @manishamondal25 report.
+
+https://t.co/hluxfwDF8U"
+FN (fake bị đoán real),1,0,24,False,False,RT @factchecknet: Just like we wash our hands to fight #COVID19 we can scrub our chats to contain the #infodemic. Here are some guidelines…
+FP (real bị đoán fake),0,1,11,False,False,At this rate India is slated to overtake #USA in testing.
+FN (fake bị đoán real),1,0,13,True,False,"RT @AgniChirag: Corona ne kuchh ki naukri chheeni, aur kuchh ka dimaag...😐 https://t.co/Vi2DFCXRr2"
+FN (fake bị đoán real),1,0,40,True,False,#CoronaCheck: Liberal politicians such as @SenSHenderson and @TimSmithMP have linked Vic's recent #COVID19 surge with Black Live Matters protests in Melb But Vic's Chief Health Officer says they are mostly linked to family gatherings. Here are the facts: https://t.co/x7dXUHRUcD https://t.co/vAoWQsQOOe
+FN (fake bị đoán real),1,0,26,False,False,"Good people of Twitter, and especially those with young children. If you or your partner have had symptoms during the lockdown, which best describes your approach:"
+FP (real bị đoán fake),0,1,16,True,False,Coronavirus: Slovenia and Guadeloupe added to England's quarantine list - but Thailand and Singapore removed https://t.co/YA0MRs9rs6
+FN (fake bị đoán real),1,0,27,True,False,The 20 countries with most #COVID19 cases together home to as many people as India have conducted 28X the tests that India has. Here's our factcheck: https://t.co/6q6yw42XBj
+FP (real bị đoán fake),0,1,19,False,True,RT @CDCemergency: Cover your cough! #COVID19 spreads through respiratory droplets when an infected person coughs sneezes or talks. Additio…
+FP (real bị đoán fake),0,1,24,True,False,At the height of the COVID-19 pandemic in New York City first responders faced nearly triple the number of calls for cardiac arrest. https://t.co/3SL4SA43wP
+FP (real bị đoán fake),0,1,24,True,False,All infants born to a cohort of 31 COVID-19–positive mothers tested negative for the virus during the height of the New York surge. https://t.co/ERZ5CG6b1x
+FN (fake bị đoán real),1,0,23,True,False,"NEW: It’s not a ""class 4 felony"" to carry a firearm while wearing a face mask to prevent the spread of COVID-19 https://t.co/JkNuD1ANVp"
+FP (real bị đoán fake),0,1,16,True,False,Chinese scientists are racing to start human trials for a COVID vaccine by August. https://t.co/XRADbWFYBa https://t.co/QjifCN8Ryq
+FN (fake bị đoán real),1,0,15,True,False,Air Canada promises 100 bonus Aeroplan Miles to any passenger that gets COVID https://t.co/MpHAJuXNJe https://t.co/H1ZJyZPHEC
+FP (real bị đoán fake),0,1,35,False,False,A small fraction of deaths in long-term care facilities are staff members. Nonetheless researchers estimate that by year’s end COVID-19 will make working in an LTC facility the most dangerous job in America in 2020.
+FN (fake bị đoán real),1,0,22,True,False,Proud of @BoltsPk team busy in packing stuff for our “COVID 19 Family Support Program”. Ensuring physical distancing as well. #EnablementDrive https://t.co/XH8H3Tk5iz
+FP (real bị đoán fake),0,1,14,True,False,Coronavirus: Labour leader Sir Keir Starmer self-isolating after household member showed COVID-19 symptoms https://t.co/xDVrs7yE9k
+FN (fake bị đoán real),1,0,9,True,False,Could Miley Cyrus' vagina Hold Clue To Vaccine? https://t.co/4jQ2DCTDUG
+FN (fake bị đoán real),1,0,11,True,False,Looters Maintain Social Distancing While Creating Anarchy https://t.co/FdomXMZPyk #covid19 #dranthonyfauci #looters
+FP (real bị đoán fake),0,1,30,False,False,From endless warnings about the world being under-prepared all countries need to dig in together and invest to ensure a pandemic of this magnitude and severity never happens again.-@DrTedros #AWorldInDisorder
+FN (fake bị đoán real),1,0,44,False,False,"@Milly_caspaces @adamhamdy If only in a situation like this there were Dr's in the UK ready to prescribe medications that offer prophylaxis or symptom reduction for #COVID19. Drugs like Chloroquine, Hydroxychloroquine, Ivermectin, Doxycycline etc. Such medical networks are in operation in the US /elsewhere"
+FN (fake bị đoán real),1,0,33,True,False,Did you see those Clive Palmer ads spruiking hydroxycholoroquine as a treatment for #COVID19 in NewsCorp papers recently? @MadMorris runs the rule over the claims in the ad for #CoronaCheck on @BreakfastNews https://t.co/37b26ZqBwr
+FN (fake bị đoán real),1,0,31,True,False,"The data scientist who designed Florida's COVID-19 dashboard — a mobile friendly, has been removed from her position because she refused to censor data and manipulate numbers. https://t.co/K4j3O8DMDz https://t.co/LevDxDBNOd#covid19 #coronavirus #coronavirusupdate"
+FP (real bị đoán fake),0,1,25,True,False,The estimated size of the unsustainable corporate debt mountain created by the #COVID19 pandemic is to be slashed to £70bn by influential City figures https://t.co/rtTCYqZN23
+FP (real bị đoán fake),0,1,12,True,False,Offering essential cancer care in the new normal of coronavirus. https://t.co/iILmNmiPP8 https://t.co/KWbbhgBWJk
+FN (fake bị đoán real),1,0,34,True,False,"Data from http://windy.com shows a massive release of sulfur dioxide gas from the outskirts of Wuhan, commonly associated with the burning of organic matters. Levels are elevated, even compared with the rest of China"
+FN (fake bị đoán real),1,0,22,True,False,New York hospitals aren't reporting fungal lung infections from face masks (which you should wear to slow the spread of COVID-19). https://t.co/BCN9LiMbm2
+FP (real bị đoán fake),0,1,19,True,False,Here’s your look at new COVID-19 cases around the nation. The overall trends haven’t changed much this week. https://t.co/u7kUUWG1TJ
+FN (fake bị đoán real),1,0,55,True,False,I know a family of 3 tested positive on #COVIDー19 two days ago. The father is on vent &amp; two isolated at home. They had 13 pet cats which during this difficult time they had no other option but to give to #EmpressMarket guys as every animal shelter NGO is at its full capacity. https://t.co/AFEWD8daQ4
+FN (fake bị đoán real),1,0,15,True,False,Man Faces Impossible Choice Between Protecting Himself From Covid &amp; Looking Like Hardy Bastard https://t.co/FhzmXx4mga
+FP (real bị đoán fake),0,1,14,True,False,Coronavirus: Jedward call on celebrities and influencers to speak out about wearing masks https://t.co/ZXmaym2gAr
+FP (real bị đoán fake),0,1,30,False,False,A major concern is that specificity is not tested using samples known to have antibodies against antigens from one or more of the 4 coronaviruses that cause the common cold.

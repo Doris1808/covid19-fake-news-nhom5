@@ -1,0 +1,9 @@
+train/val/test: 6420 2140 2140
+label
+0    3360
+1    3060
+Name: count, dtype: int64
+                                                   text  label
+148   Free Coronavirus Test Kits Available To All ht...      1
+1547  The first case we are reporting today is a man...      0
+3519   Dad would rather get coronavirus than fist-bump.      1

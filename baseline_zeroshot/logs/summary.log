@@ -1,0 +1,10 @@
+                           method  test_acc  test_f1w
+                     TF-IDF + SVM    0.9491    0.9491
+        TF-IDF + Hồi quy logistic    0.9467    0.9467
+                Bài báo gốc (SVM)       NaN    0.9346
+             TF-IDF + Naive Bayes    0.9299    0.9299
+          TF-IDF + Cây quyết định    0.8808    0.8807
+     Zero-shot (ngưỡng chỉnh 0.3)    0.6972    0.6967
+Zero-shot (BART-MNLI, ngưỡng 0.5)    0.6986    0.6812
+
+Đã lưu results/summary_table.csv và results/summary_chart.png
