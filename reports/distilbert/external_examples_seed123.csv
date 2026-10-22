@@ -1,0 +1,3 @@
+﻿id,text,reference_label,predicted_label,correct,score_fake,score_real,source_url,sample_type,model_seed
+1,People of all ages can get infected by the new coronavirus.,real,fake,False,0.9983972907066345,0.0016026800731197,https://www.who.int/vietnam/emergencies/covid-19-in-vietnam/information/mythbusters,verbatim_source,123
+2,"No, drinking alcohol does not protect you from COVID-19 infection.",real,fake,False,0.9983792304992676,0.0016207309672608972,https://www.who.int/vietnam/emergencies/covid-19-in-vietnam/information/mythbusters,verbatim_source,123
