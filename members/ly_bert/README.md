@@ -2,7 +2,7 @@
 
 Phần phụ trách: BERT-base, huấn luyện 3 seed, đánh giá Test, phân tích lỗi, thử nghiệm câu ngoài và chuẩn bị demo (Chạy tay).
 
-Thư mục này chứa mã nguồn (`.ipynb`), các file cấu hình (`config.json`, `training_args.bin`) và nhật ký kết quả của mô hình BERT. Tuân thủ quy định dùng chung split của nhóm, nhãn `fake=0`/`real=1`, tiêu chí chọn checkpoint tốt nhất là Validation F1 weighted. Các metric được ghi nhận trên thang 0–1. Tuyệt đối không commit file trọng số nặng (model.safetensors).
+Thư mục này dành cho code được tích hợp sau. Chứa mã nguồn (`.ipynb`), các file cấu hình (`config.json`, `training_args.bin`) và nhật ký kết quả của mô hình BERT. Tuân thủ quy định dùng chung split của nhóm, nhãn `fake=0`/`real=1`, tiêu chí chọn checkpoint tốt nhất là Validation F1 weighted. Các metric được ghi nhận trên thang 0–1. Không ghi đè thư mục kết quả của thành viên khác và tuyệt đối không commit file trọng số nặng (`model.safetensors`).
 
 ---
 
@@ -19,18 +19,18 @@ Quá trình huấn luyện sử dụng mô hình `bert-base-uncased`, nhãn phâ
 
 **Lựa chọn Checkpoint:** Checkpoint tại **Epoch 3 của Seed 2024 (checkpoint-1206)** được chọn làm kết quả chính thức để đánh giá Test, tích hợp và chạy Demo vì đạt Validation F1 weighted cao nhất.
 
-### 1.2. Kết quả đánh giá độc lập trên tập Test cả 3 Seed (2.140 mẫu)
+### 1.2. Kết quả trên tập Test cả 3 Seed (2.140 mẫu: 1.020 Fake, 1.120 Real)
 
-Kết quả chạy thực tế trên tập Test giữ kín của cả 3 mô hình đã huấn luyện:
+Đánh giá độc lập cả 3 seed trên tập Test (thang 0–1). *(Ghi chú: Hàm `compute_metrics` của BERT-base được cấu hình tập trung xuất ra 2 chỉ số quan trọng nhất của nhóm là Accuracy và F1 Weighted)*:
 
 | Seed | Split | Accuracy | F1 Weighted | Tổng số câu sai | Tỉ lệ lỗi |
 | --- | --- | --- | --- | --- | --- |
-| **Seed 42** | Test | 0.981308 | 0.981304 | 40 / 2140 | 0.018692 |
+| **Seed 42** | Test | **0.981308** | **0.981304** | 40 / 2140 | 0.018692 |
 | **Seed 123** | Test | 0.979439 | 0.979436 | 44 / 2140 | 0.020561 |
 | **Seed 2024** | Test | 0.979439 | 0.979437 | 44 / 2140 | 0.020561 |
 | **Mean ± Std** | **Test** | **0.980062 ± 0.001079** | **0.980059 ± 0.001078** | **42.7 / 2140** | **0.019938** |
 
-*(Ghi chú phần cứng: Các seed được huấn luyện trên Google Colab với GPU T4 - 16GB VRAM. Thiết lập `batch_size=16`, max_length=128, huấn luyện 3 epoch).*
+*(Ghi chú phần cứng: Các seed được huấn luyện trên Google Colab với GPU T4 - 16GB VRAM. Thiết lập `batch_size=16`, `max_length=128`, huấn luyện 3 epoch).*
 
 ---
 
@@ -38,14 +38,15 @@ Kết quả chạy thực tế trên tập Test giữ kín của cả 3 mô hìn
 
 ### 2.1. Phân tích lỗi trên tập Validation (Checkpoint Seed 2024)
 
-Sử dụng checkpoint **Seed 2024** để dự đoán lại tập Validation, hệ thống ghi nhận có **42 câu dự đoán sai**. Từ việc trích xuất và phân tích 10 mẫu lỗi đầu tiên, nhận thấy 2 nguyên nhân cốt lõi khiến mô hình nhầm lẫn:
+Sử dụng checkpoint **Seed 2024 (Tốt nhất)** để dự đoán lại tập Validation, mô hình ghi nhận **42 câu dự đoán sai** (Tỷ lệ lỗi 1.96%). Từ việc trích xuất các mẫu lỗi, rút ra 2 nguyên nhân cốt lõi khiến mô hình nhầm lẫn:
 
-- **Lỗi False Positives (Nhãn thật `Fake=0`, đoán nhầm `Real=1`):** Mô hình dễ bị lừa bởi các tin giả "đội lốt" bài đính chính. Ví dụ: *"There is no evidence that children have died..."*. Tin giả này sử dụng văn phong học thuật, trịnh trọng và chèn kèm URL. Do BERT không thể tra cứu sự thật ngoài đời, nó đánh giá cấu trúc văn phong này là của tin chính thống và gán nhãn `Real`.
-- **Lỗi False Negatives (Nhãn thật `Real=1`, đoán nhầm `Fake=0`):** Các đoạn thông báo y tế thực tế nhưng viết bằng ngôn ngữ quá đời thường, thân mật hoặc quá ngắn gọn (Ví dụ: *"A reminder about maintaining good hygiene: wash your hands often..."*) thường bị đẩy về nhãn `Fake` do thiếu các đặc trưng quen thuộc như đường dẫn URL hay metadata hashtag.
+- **Tin giả mang văn phong báo chí (False Positives – Nhãn thật `Fake=0`, đoán nhầm `Real=1`):** Mô hình dễ bị lừa bởi các tin giả "đội lốt" đính chính sự thật. Ví dụ: *"There is no evidence that children have died because of a COVID-19 vaccine..."*. Tin giả này sử dụng cấu trúc văn phong học thuật, trịnh trọng và chèn kèm URL. Do BERT phân loại dựa trên nội dung văn bản chứ không kết nối cơ sở dữ liệu y khoa để kiểm chứng sự thật (fact-checking), nó đánh giá cấu trúc này là của tin chính thống và gán nhãn `Real`.
+    
+- **Tin thật thiếu dấu hiệu nhận diện (False Negatives – Nhãn thật `Real=1`, đoán nhầm `Fake=0`):** Các đoạn thông báo thực tế nhưng viết bằng ngôn ngữ quá đời thường, hoặc là lời nhắc nhở ngắn gọn (Ví dụ: *"A reminder about maintaining good hygiene: wash your hands often..."*). Việc thiếu các đặc trưng quen thuộc của một bài báo cáo (như đường dẫn URL `t.co`, số liệu thống kê) khiến BERT nghi ngờ và đẩy về nhãn `Fake`.
 
 ### 2.2. Thử nghiệm 7 câu ngoài có nguồn (External Wild Samples)
 
-Sử dụng checkpoint tốt nhất **Seed 2024** để kiểm thử Live trên 7 câu tiếng Anh thực tế (có chứa 2 câu của tổ chức WHO mà báo cáo nhóm đã nhắc tới). Kết quả mô hình đoán **đúng 3/7 câu**:
+Sử dụng checkpoint **Seed 2024** để kiểm thử trên 7 câu tiếng Anh thực tế ngoài tập dữ liệu. Kết quả mô hình đoán **đúng 3/7 câu**:
 
 | Mã | Nguồn | Câu thực tế ngoài tập dữ liệu | Nhãn thật | Dự đoán | Kết quả |
 | --- | --- | --- | --- | --- | --- |
@@ -57,26 +58,24 @@ Sử dụng checkpoint tốt nhất **Seed 2024** để kiểm thử Live trên 
 | **E6** | WHO Viet Nam | *"People of all ages can get infected by the new coronavirus."* | `Real (1)` | `Fake (0)` | **SAI (FN)** |
 | **E7** | WHO Viet Nam | *"No, drinking alcohol does not protect you from COVID-19 infection."* | `Real (1)` | `Fake (0)` | **SAI (FN)** |
 
-**Kết luận phân tích câu ngoài:** Mô hình BERT-base bắt tin giả (Fake) rất xuất sắc (đoán trúng 100% các câu Conspiracy và Rumor). Tuy nhiên, với các tin `Real` lấy từ Internet, mô hình đều đoán nhầm thành Fake. Nguyên nhân do các câu này không chứa các dấu hiệu quen thuộc trong tập Train (như link URL `t.co`, hashtag). Việc thiếu metadata hoặc sử dụng cấu trúc phủ định cục bộ (*"No"*, *"does not"*) khiến mô hình bị lệch hướng, tương tự như lỗi của DistilBERT mà nhóm đã phân tích.
+**Giải thích lỗi:** Mô hình BERT-base bắt tin đồn/tin giả (Fake) rất xuất sắc (đoán trúng 100% các câu Thuyết âm mưu và Lời đồn). Tuy nhiên, với các tin `Real` lấy từ Internet, mô hình đều đoán nhầm thành Fake. Nguyên nhân cốt lõi là do sự chênh lệch phân bố từ vựng: Các câu thử nghiệm không chứa các dấu hiệu quen thuộc trong tập Train (metadata tài khoản, hashtag). Việc sử dụng cấu trúc phủ định cục bộ (*"No"*, *"does not"*) trong câu E2 và E7 cũng đánh lừa mô hình, tương đồng với lỗi mà mô hình DistilBERT của nhóm gặp phải.
 
 ---
 
-## 3. Phần Demo (Chạy tay trực tiếp trong Notebook)
+## 3. Phần Demo (Nhập câu và trả nhãn trực tiếp trong Notebook)
 
-Để đáp ứng yêu cầu "Chạy tay" trực tiếp của giảng viên, một hàm suy luận (Inference) đã được tích hợp ở cuối notebook `Ly_Bert_2.ipynb`.
+Để đáp ứng yêu cầu "Chạy tay" trực tiếp, hàm suy luận (Inference) đã được thiết kế tại ô code cuối cùng trong notebook `Ly_Bert_2.ipynb` (nạp checkpoint từ **Seed 2024**).
 
-- **Cách hoạt động:** Hàm `predict_fake_news(text)` nhận câu do giảng viên cung cấp, tự động Tokenize với `max_length=128`, nạp vào ma trận trọng số của GPU và trả về nhãn cuối cùng (`Fake` hoặc `Real`).
-- **Ví dụ output thực tế trong Notebook:**
-  - Input: `"States reported 1121 deaths a small rise from last Tuesday. Southern states reported 640 of those deaths. https://t.co/YASGRTT4ux,"`
-  - Dự đoán tự động trả về: **`=> Kết quả dự đoán: Real (Tin thật)`**
+- **Cách hoạt động:** Hàm `predict_fake_news(text)` nhận trực tiếp câu tiếng Anh, thực hiện tokenize (`max_length=128`), nạp vào GPU và trả về nhãn dự đoán `Fake (Tin giả)` hoặc `Real (Tin thật)`.
+- **Ví dụ output thực tế:**
+  - **Input:** `"States reported 1121 deaths a small rise from last Tuesday. Southern states reported 640 of those deaths. https://t.co/YASGRTT4ux,"`
+  - **Dự đoán:** `=> Kết quả dự đoán: Real (Tin thật)`
 
 ---
 
 ## 4. Hướng dẫn chạy code và Minh chứng
 
-- **Mã nguồn:** Toàn bộ quá trình từ nạp dữ liệu, xử lý Tokenizer, Train 3 Seed, Đánh giá Test, Phân tích lỗi Validation, Test 7 câu mạng và Live Demo đều nằm trọn vẹn trong file notebook `Ly_Bert_2.ipynb`.
-- **Cài đặt thư viện:** `!pip install transformers datasets scikit-learn`
+- **Mã nguồn:** Toàn bộ quá trình từ Khởi tạo Tokenizer, Train 3 Seed, Đánh giá Test, Phân tích 42 lỗi Validation, Test 7 câu trên mạng và Live Demo đều được lưu trữ trực tiếp trong file notebook `Ly_Bert_2.ipynb`.
+- **Cài đặt thư viện:** `!pip install transformers datasets scikit-learn pandas numpy torch`
 - **Tái lập kết quả:** Dùng Google Colab (GPU T4). Bấm *Runtime > Run all* để chạy từ trên xuống dưới. Mô hình sẽ tự động trỏ vào `checkpoint-1206` của thư mục `bert_base_seed_2024` để báo cáo điểm cuối cùng.
-- **Trọng số:** Theo quy định của nhóm, các tệp quá lớn (`*.safetensors`) đã bị loại bỏ qua lệnh zip. File `.zip` được đính kèm ở thư mục này chứa đầy đủ `config.json` và log làm minh chứng thực nghiệm.
-```eof
-
+- **Trọng số mô hình (Checkpoint):** Tuân thủ quy tắc nhóm (không commit trọng số lớn), file mô hình nặng (`model.safetensors`, `optimizer.pt`...) không được tải lên kho chứa chung. Thư mục `.zip` đính kèm chứa file `config.json`, `trainer_state.json` và `training_args.bin` từ `checkpoint-1206` của seed 2024 đã được cung cấp để minh chứng cho toàn bộ quá trình thực nghiệm này.
