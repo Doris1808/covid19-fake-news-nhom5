@@ -1,0 +1,11 @@
+Mã câu,Nguồn,Nhãn thật,Dự đoán,P(Real),P(Fake),Kết quả,Nội dung câu
+E1,WHO Mythbusters,REAL,REAL,0.9998,0.0002,ĐÚNG,"The World Health Organization confirms that COVID-19 vaccines do not alter your DNA in any way, as mRNA never enters the nucleus of the cell."
+E2,CDC Guidance,REAL,REAL,0.9974,0.0026,ĐÚNG,"According to the CDC, people who test positive for COVID-19 should stay home and isolate for at least 5 days to prevent spreading the virus to others."
+E3,Reuters Fact Check,FAKE,REAL,0.9998,0.0002,SAI,Drinking boiled garlic water and gargling with warm salt water three times a day is proven by doctors to completely cure COVID-19 within 24 hours!
+E4,PolitiFact,FAKE,REAL,0.9996,0.0004,SAI,5G mobile networks are directly transmitting the coronavirus and weakening the human immune system so people get infected faster.
+E5,AP Fact Check,FAKE,REAL,0.9998,0.0002,SAI,Secret documents leaked from hospitals show that microchips are being injected into patients through standard COVID-19 PCR nasal swabs.
+E6,NEJM Study,REAL,REAL,0.9988,0.0012,ĐÚNG,A clinical study published in the New England Journal of Medicine reported 95% efficacy of the BNT162b2 mRNA vaccine against symptomatic COVID-19.
+E7,HealthFeedback (Ngụy khoa học),FAKE,REAL,0.9983,0.0017,SAI,"A peer-reviewed study from the National Institute of Respiratory Health in Geneva found that daily intake of 500mg vitamin D3 reduces COVID-19 hospitalization rates to 0.0% across 14,200 patients."
+E8,BBC News (Tiêu đề nghi vấn),REAL,REAL,0.9998,0.0002,ĐÚNG,Why are some fully vaccinated people still catching the new coronavirus variant? Here is what virologists say.
+E9,ICAO / Reuters (Kinh tế),REAL,REAL,0.9997,0.0003,ĐÚNG,Global airline passenger traffic dropped by 60% in 2020 as countries imposed strict border closures to contain the COVID-19 pandemic.
+E10,Snopes / WHO,FAKE,REAL,0.9998,0.0002,SAI,BREAKING: Holding your breath for 10 seconds without coughing or discomfort means you do not have COVID-19 or pulmonary fibrosis!!!
