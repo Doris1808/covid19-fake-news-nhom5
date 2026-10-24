@@ -1,0 +1,41 @@
+1. Chất lượng cơ bản
+Số mẫu mỗi tập: {'train': 6420, 'val': 2140, 'test': 2140}
+Giá trị thiếu (text): 0
+Bài rỗng sau khi strip: 0
+Phân bố nhãn theo tập (tỉ lệ fake):
+       count    mean
+split               
+test    2140  0.4766
+train   6420  0.4766
+val     2140  0.4766
+
+ 2. Trùng lặp và rò rỉ giữa các tập
+Bài trùng hệt trong train: 0;  trùng sau chuẩn hóa: 103
+Bài trùng hệt trong val: 0;  trùng sau chuẩn hóa: 19
+Bài trùng hệt trong test: 0;  trùng sau chuẩn hóa: 13
+Giao nhau sau chuẩn hóa: traingiaoval = 88 | traingiaotest = 89 | valgiaotest = 27
+Nội dung trùng nhưng khác nhãn: 0
+
+3. Đặc điểm văn bản (tỉ lệ bài có đặc điểm đó)
+                                 đặc điểm  tỉ lệ chung  tỉ lệ trong real  tỉ lệ trong fake  chênh (fake - real)
+                                  có link        0.517             0.694             0.322               -0.372
+                              có @mention        0.186             0.282             0.079               -0.203
+                               có hashtag        0.352             0.508             0.182               -0.326
+                          bắt đầu bằng RT        0.040             0.072             0.006               -0.066
+                                 có dấu !        0.039             0.017             0.064                0.047
+                                 có dấu ?        0.064             0.025             0.107                0.081
+có ký tự non-ASCII (emoji, ngoặc cong...)        0.297             0.355             0.234               -0.122
+          có dấu … hoặc ... (bị cắt cụt?)        0.053             0.079             0.025               -0.055
+             có thực thể HTML (&amp; ...)        0.058             0.095             0.018               -0.077
+                            có xuống dòng        0.038             0.000             0.080                0.080
+   có khoảng trắng thừa đầu/cuối hoặc kép        0.001             0.002             0.000               -0.002
+         có từ viết hoa toàn bộ (>=3 chữ)        0.439             0.459             0.417               -0.041
+                                    có số        0.796             0.927             0.651               -0.276
+
+ 4. Độ dài theo nhãn (số từ) 
+       count  mean   std  min   50%   95%     max
+real  5600.0  32.0  22.5  3.0  32.0  48.0  1484.0
+fake  5100.0  21.7  27.3  3.0  17.0  45.0  1456.0
+Số link trung bình: real = 0.951 | fake = 0.405
+
+Đã lưu results/eda_features_by_label.csv, eda_length_by_label.csv, eda_overview.png

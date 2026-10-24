@@ -1,0 +1,8 @@
+method,config,test_acc,test_f1w
+TF-IDF + SVM,"bi_min2_nosub, stats=True, {""C"": 1}",0.9490654205607476,0.9490686637430604
+TF-IDF + Hồi quy logistic,"bi_min2, stats=True, {""C"": 100}",0.9467289719626168,0.9467312566739152
+Bài báo gốc (SVM),"Patwa et al., 2021",,0.9346
+TF-IDF + Naive Bayes,"bi_min2, stats=True, {""alpha"": 0.1}",0.9299065420560748,0.9299124312522234
+TF-IDF + Cây quyết định,"uni_min2, stats=True, {""max_depth"": 50}",0.880841121495327,0.8807141186137285
+Zero-shot (ngưỡng chỉnh 0.3),"như trên, ngưỡng chọn trên val",0.697196261682243,0.696670998245676
+"Zero-shot (BART-MNLI, ngưỡng 0.5)","reliable/misinformation, 'The following post is {}.'",0.6985981308411215,0.6812319769643307
