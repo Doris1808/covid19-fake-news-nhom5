@@ -8,16 +8,16 @@ Thư mục này dành cho code được tích hợp sau. Chứa mã nguồn (`Ly
 
 ## 1. Kết quả thực nghiệm (Đánh giá trên tập Validation và Test)
 
-Quá trình huấn luyện sử dụng mô hình `bert-base-uncased`, nhãn phân loại được cấu hình cứng vào metadata của mô hình thông qua `id2label` (`fake=0`, `real=1`) để đảm bảo tính đồng nhất. Mô hình được tinh chỉnh với `learning_rate=2e-5` và `weight_decay=0.01`. Dữ liệu sử dụng chung split chuẩn của nhóm (6.420 mẫu Train / 2.140 mẫu Validation / 2.140 mẫu Test).
+Quá trình huấn luyện sử dụng mô hình `bert-base-uncased`, nhãn phân loại được cấu hình cứng vào metadata của mô hình thông qua `id2label` (`fake=0`, `real=1`) để đảm bảo tính đồng nhất. Mô hình được tinh chỉnh với tiêu chuẩn `learning_rate=2e-5` và `weight_decay=0.01` nhằm tránh overfitting. Dữ liệu sử dụng chung split chuẩn của nhóm (6.420 mẫu Train / 2.140 mẫu Validation / 2.140 mẫu Test).
 
 ### 1.1. Kết quả trên tập Validation (2.140 mẫu: 1.020 Fake, 1.120 Real)
 
-- **Seed 42:** Validation F1 Weighted = `0.979432` (Accuracy = `0.979439`)
-- **Seed 123:** Validation F1 Weighted = `0.978503` (Accuracy = `0.978505`)
-- **Seed 2024:** Validation F1 Weighted = **`0.980368`** (Accuracy = **`0.980374`**) — *(Tốt nhất)*
-- **Trung bình (Mean ± Std trên tập Validation):** F1 Weighted = `0.979434 ± 0.000933`
+- **Seed 42:** Validation F1 Weighted = `0.970544` (Accuracy = `0.970561`)
+- **Seed 123:** Validation F1 Weighted = **`0.975217`** (Accuracy = **`0.975234`**) — *(Tốt nhất)*
+- **Seed 2024:** Validation F1 Weighted = `0.971939` (Accuracy = `0.971963`)
+- **Trung bình (Mean ± Std trên tập Validation):** F1 Weighted = `0.972566 ± 0.002403`
 
-**Lựa chọn Checkpoint:** Checkpoint tại **Epoch 3 của Seed 2024 (checkpoint-1206)** được chọn làm kết quả chính thức để đánh giá Test, tích hợp và chạy Demo vì đạt Validation F1 weighted cao nhất.
+**Lựa chọn Checkpoint:** Checkpoint tại **Epoch 3 của Seed 123 (checkpoint-1206)** được chọn làm kết quả chính thức để đánh giá Test, tích hợp và chạy Demo vì đạt Validation F1 weighted cao nhất.
 
 ### 1.2. Kết quả trên tập Test cả 3 Seed (2.140 mẫu: 1.020 Fake, 1.120 Real)
 
@@ -25,10 +25,10 @@ Quá trình huấn luyện sử dụng mô hình `bert-base-uncased`, nhãn phâ
 
 | Seed | Split | Accuracy | F1 Weighted | Tổng số câu sai | Tỉ lệ lỗi |
 | --- | --- | --- | --- | --- | --- |
-| **Seed 42** | Test | **0.981308** | **0.981304** | 40 / 2140 | 0.018692 |
-| **Seed 123** | Test | 0.979439 | 0.979436 | 44 / 2140 | 0.020561 |
-| **Seed 2024** | Test | 0.979439 | 0.979437 | 44 / 2140 | 0.020561 |
-| **Mean ± Std** | **Test** | **0.980062 ± 0.001079** | **0.980059 ± 0.001078** | **42.7 / 2140** | **0.019938** |
+| **Seed 42** | Test | 0.973832 | 0.973827 | 56 / 2140 | 0.026168 |
+| **Seed 123** | Test | **0.974766** | **0.974752** | 54 / 2140 | 0.025234 |
+| **Seed 2024** | Test | 0.973832 | 0.973815 | 56 / 2140 | 0.026168 |
+| **Mean ± Std** | **Test** | **0.974143 ± 0.000539** | **0.974131 ± 0.000537** | **55.3 / 2140** | **0.025855** |
 
 *(Ghi chú phần cứng: Các seed được huấn luyện trên Google Colab với GPU T4 - 16GB VRAM. Thiết lập `batch_size=16`, `max_length=128`, huấn luyện 3 epoch).*
 
@@ -36,9 +36,9 @@ Quá trình huấn luyện sử dụng mô hình `bert-base-uncased`, nhãn phâ
 
 ## 2. Nhật ký Phân tích lỗi & Kiểm thử câu ngoài (Error Analysis)
 
-### 2.1. Phân tích lỗi trên tập Validation (Checkpoint Seed 2024)
+### 2.1. Phân tích lỗi trên tập Validation (Checkpoint Seed 123)
 
-Sử dụng checkpoint **Seed 2024 (Tốt nhất)** để dự đoán lại tập Validation, mô hình ghi nhận **42 câu dự đoán sai** (Tỷ lệ lỗi 1.96%). Từ việc trích xuất các mẫu lỗi, rút ra 2 nguyên nhân cốt lõi khiến mô hình nhầm lẫn:
+Sử dụng checkpoint **Seed 123 (Tốt nhất)** để dự đoán lại tập Validation, mô hình ghi nhận **60 câu dự đoán sai** (Tỷ lệ lỗi 2.8%). Từ việc trích xuất các mẫu lỗi, rút ra 2 nguyên nhân cốt lõi khiến mô hình nhầm lẫn:
 
 - **Tin giả mang văn phong báo chí (False Positives – Nhãn thật `Fake=0`, đoán nhầm `Real=1`):** Mô hình dễ bị lừa bởi các tin giả "đội lốt" đính chính sự thật. Ví dụ: *"There is no evidence that children have died because of a COVID-19 vaccine..."*. Tin giả này sử dụng cấu trúc văn phong học thuật, trịnh trọng và chèn kèm URL. Do BERT phân loại dựa trên nội dung văn bản chứ không kết nối cơ sở dữ liệu y khoa để kiểm chứng sự thật (fact-checking), nó đánh giá cấu trúc này là của tin chính thống và gán nhãn `Real`.
     
@@ -46,7 +46,7 @@ Sử dụng checkpoint **Seed 2024 (Tốt nhất)** để dự đoán lại tậ
 
 ### 2.2. Thử nghiệm 7 câu ngoài có nguồn (External Wild Samples)
 
-Sử dụng checkpoint **Seed 2024** để kiểm thử trên 7 câu tiếng Anh thực tế ngoài tập dữ liệu. Kết quả mô hình đoán **đúng 3/7 câu**:
+Sử dụng checkpoint **Seed 123** để kiểm thử trên 7 câu tiếng Anh thực tế ngoài tập dữ liệu. Kết quả mô hình đoán **đúng 3/7 câu**:
 
 | Mã | Nguồn | Câu thực tế ngoài tập dữ liệu | Nhãn thật | Dự đoán | Kết quả |
 | --- | --- | --- | --- | --- | --- |
@@ -64,6 +64,18 @@ Sử dụng checkpoint **Seed 2024** để kiểm thử trên 7 câu tiếng Anh
 
 ## 3. Phần Demo (Nhập câu và trả nhãn trực tiếp trong Notebook)
 
-Để đáp ứng yêu cầu "Chạy tay" trực tiếp và đảm bảo không xảy ra hiện tượng đảo nhãn khi deploy, hàm suy luận (Inference) đã được cập nhật.
+Để đáp ứng yêu cầu "Chạy tay" trực tiếp và đảm bảo không xảy ra hiện tượng đảo nhãn khi deploy, hàm suy luận (Inference) đã được cập nhật (nạp checkpoint từ **Seed 123**).
 
-- **Đảm bảo đồng nhất nhãn (Label Consistency):** Hàm sử dụng trực tiếp cấu hình `best_model.config.id2label` đã được lưu cứng trong file `config.json` để ánh xạ dự đoán (0 -> Fake, 1 -> Real
+- **Đảm bảo đồng nhất nhãn (Label Consistency):** Hàm sử dụng trực tiếp cấu hình `best_model.config.id2label` đã được lưu cứng trong file `config.json` để ánh xạ dự đoán (0 -> Fake, 1 -> Real). Điều này giải quyết hoàn toàn rủi ro sai lệch nhãn khi đưa lên ứng dụng web Streamlit.
+- **Ví dụ output thực tế:**
+  - **Input:** `"States reported 1121 deaths a small rise from last Tuesday. Southern states reported 640 of those deaths. https://t.co/YASGRTT4ux,"`
+  - **Dự đoán:** `=> Kết quả dự đoán: Real (Tin thật)`
+
+---
+
+## 4. Hướng dẫn chạy code và Minh chứng
+
+- **Mã nguồn:** Toàn bộ quá trình từ Khởi tạo Tokenizer, Train 3 Seed, In Báo cáo phân loại & Ma trận nhầm lẫn Test, Phân tích 60 lỗi Validation, Test 7 câu trên mạng và Live Demo đều được tích hợp hoàn chỉnh trong `Ly_Bert_2.ipynb`.
+- **Cài đặt thư viện:** `!pip install transformers datasets scikit-learn pandas numpy torch`
+- **Tái lập kết quả:** Dùng Google Colab (GPU T4). Bấm *Runtime > Run all* để chạy từ trên xuống dưới. Mô hình sẽ tự động trỏ vào `checkpoint-1206` của thư mục `bert_base_seed_123` để báo cáo điểm cuối cùng.
+- **Trọng số mô hình (Checkpoint):** Tuân thủ quy tắc nhóm (không commit trọng số lớn), file mô hình nặng (`model.safetensors`, `optimizer.pt`...) không được tải lên kho chứa chung. Thư mục `.zip` đính kèm chứa file `config.json`, `trainer_state.json` và `training_args.bin` từ `checkpoint-1206` của **Seed 123** đã được cung cấp để minh chứng cho toàn bộ quá trình thực nghiệm này.
