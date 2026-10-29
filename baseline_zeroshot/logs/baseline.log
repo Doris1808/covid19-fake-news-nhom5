@@ -1,0 +1,122 @@
+uni_min2 False NaiveBayes {'alpha': 0.1} 0 val_f1w=0.9210
+uni_min2 False NaiveBayes {'alpha': 0.5} 0 val_f1w=0.9168
+uni_min2 False NaiveBayes {'alpha': 1.0} 0 val_f1w=0.9158
+uni_min2 False LogReg {'C': 0.1} 0 val_f1w=0.9121
+uni_min2 False LogReg {'C': 1} 0 val_f1w=0.9289
+uni_min2 False LogReg {'C': 10} 0 val_f1w=0.9406
+uni_min2 False LogReg {'C': 100} 0 val_f1w=0.9416
+uni_min2 False LinearSVC {'C': 0.1} 0 val_f1w=0.9327
+uni_min2 False LinearSVC {'C': 0.5} 0 val_f1w=0.9388
+uni_min2 False LinearSVC {'C': 1} 0 val_f1w=0.9388
+uni_min2 False LinearSVC {'C': 5} 0 val_f1w=0.9350
+uni_min2 False DecisionTree {'max_depth': 10} 42 val_f1w=0.8616
+uni_min2 False DecisionTree {'max_depth': 10} 1 val_f1w=0.8635
+uni_min2 False DecisionTree {'max_depth': 10} 2 val_f1w=0.8616
+uni_min2 False DecisionTree {'max_depth': 50} 42 val_f1w=0.8686
+uni_min2 False DecisionTree {'max_depth': 50} 1 val_f1w=0.8738
+uni_min2 False DecisionTree {'max_depth': 50} 2 val_f1w=0.8720
+uni_min2 True NaiveBayes {'alpha': 0.1} 0 val_f1w=0.9238
+uni_min2 True NaiveBayes {'alpha': 0.5} 0 val_f1w=0.9247
+uni_min2 True NaiveBayes {'alpha': 1.0} 0 val_f1w=0.9171
+uni_min2 True LogReg {'C': 0.1} 0 val_f1w=0.8577
+uni_min2 True LogReg {'C': 1} 0 val_f1w=0.9219
+uni_min2 True LogReg {'C': 10} 0 val_f1w=0.9411
+uni_min2 True LogReg {'C': 100} 0 val_f1w=0.9378
+uni_min2 True LinearSVC {'C': 0.1} 0 val_f1w=0.9266
+uni_min2 True LinearSVC {'C': 0.5} 0 val_f1w=0.9406
+uni_min2 True LinearSVC {'C': 1} 0 val_f1w=0.9425
+uni_min2 True LinearSVC {'C': 5} 0 val_f1w=0.9369
+uni_min2 True DecisionTree {'max_depth': 10} 42 val_f1w=0.8869
+uni_min2 True DecisionTree {'max_depth': 10} 1 val_f1w=0.8854
+uni_min2 True DecisionTree {'max_depth': 10} 2 val_f1w=0.8850
+uni_min2 True DecisionTree {'max_depth': 50} 42 val_f1w=0.8929
+uni_min2 True DecisionTree {'max_depth': 50} 1 val_f1w=0.8962
+uni_min2 True DecisionTree {'max_depth': 50} 2 val_f1w=0.8864
+bi_min2 False NaiveBayes {'alpha': 0.1} 0 val_f1w=0.9313
+bi_min2 False NaiveBayes {'alpha': 0.5} 0 val_f1w=0.9262
+bi_min2 False NaiveBayes {'alpha': 1.0} 0 val_f1w=0.9228
+bi_min2 False LogReg {'C': 0.1} 0 val_f1w=0.9073
+bi_min2 False LogReg {'C': 1} 0 val_f1w=0.9247
+bi_min2 False LogReg {'C': 10} 0 val_f1w=0.9401
+bi_min2 False LogReg {'C': 100} 0 val_f1w=0.9429
+bi_min2 False LinearSVC {'C': 0.1} 0 val_f1w=0.9252
+bi_min2 False LinearSVC {'C': 0.5} 0 val_f1w=0.9411
+bi_min2 False LinearSVC {'C': 1} 0 val_f1w=0.9439
+bi_min2 False LinearSVC {'C': 5} 0 val_f1w=0.9430
+bi_min2 False DecisionTree {'max_depth': 10} 42 val_f1w=0.8770
+bi_min2 False DecisionTree {'max_depth': 10} 1 val_f1w=0.8775
+bi_min2 False DecisionTree {'max_depth': 10} 2 val_f1w=0.8766
+bi_min2 False DecisionTree {'max_depth': 50} 42 val_f1w=0.8860
+bi_min2 False DecisionTree {'max_depth': 50} 1 val_f1w=0.8804
+bi_min2 False DecisionTree {'max_depth': 50} 2 val_f1w=0.8827
+bi_min2 True NaiveBayes {'alpha': 0.1} 0 val_f1w=0.9346
+bi_min2 True NaiveBayes {'alpha': 0.5} 0 val_f1w=0.9308
+bi_min2 True NaiveBayes {'alpha': 1.0} 0 val_f1w=0.9260
+bi_min2 True LogReg {'C': 0.1} 0 val_f1w=0.8475
+bi_min2 True LogReg {'C': 1} 0 val_f1w=0.9177
+bi_min2 True LogReg {'C': 10} 0 val_f1w=0.9397
+bi_min2 True LogReg {'C': 100} 0 val_f1w=0.9448
+bi_min2 True LinearSVC {'C': 0.1} 0 val_f1w=0.9261
+bi_min2 True LinearSVC {'C': 0.5} 0 val_f1w=0.9434
+bi_min2 True LinearSVC {'C': 1} 0 val_f1w=0.9458
+bi_min2 True LinearSVC {'C': 5} 0 val_f1w=0.9467
+bi_min2 True DecisionTree {'max_depth': 10} 42 val_f1w=0.8758
+bi_min2 True DecisionTree {'max_depth': 10} 1 val_f1w=0.8702
+bi_min2 True DecisionTree {'max_depth': 10} 2 val_f1w=0.8734
+bi_min2 True DecisionTree {'max_depth': 50} 42 val_f1w=0.8865
+bi_min2 True DecisionTree {'max_depth': 50} 1 val_f1w=0.8860
+bi_min2 True DecisionTree {'max_depth': 50} 2 val_f1w=0.8804
+bi_min2_nosub False NaiveBayes {'alpha': 0.1} 0 val_f1w=0.9304
+bi_min2_nosub False NaiveBayes {'alpha': 0.5} 0 val_f1w=0.9271
+bi_min2_nosub False NaiveBayes {'alpha': 1.0} 0 val_f1w=0.9209
+bi_min2_nosub False LogReg {'C': 0.1} 0 val_f1w=0.9025
+bi_min2_nosub False LogReg {'C': 1} 0 val_f1w=0.9237
+bi_min2_nosub False LogReg {'C': 10} 0 val_f1w=0.9420
+bi_min2_nosub False LogReg {'C': 100} 0 val_f1w=0.9444
+bi_min2_nosub False LinearSVC {'C': 0.1} 0 val_f1w=0.9247
+bi_min2_nosub False LinearSVC {'C': 0.5} 0 val_f1w=0.9425
+bi_min2_nosub False LinearSVC {'C': 1} 0 val_f1w=0.9439
+bi_min2_nosub False LinearSVC {'C': 5} 0 val_f1w=0.9448
+bi_min2_nosub False DecisionTree {'max_depth': 10} 42 val_f1w=0.8734
+bi_min2_nosub False DecisionTree {'max_depth': 10} 1 val_f1w=0.8734
+bi_min2_nosub False DecisionTree {'max_depth': 10} 2 val_f1w=0.8715
+bi_min2_nosub False DecisionTree {'max_depth': 50} 42 val_f1w=0.8813
+bi_min2_nosub False DecisionTree {'max_depth': 50} 1 val_f1w=0.8823
+bi_min2_nosub False DecisionTree {'max_depth': 50} 2 val_f1w=0.8837
+bi_min2_nosub True NaiveBayes {'alpha': 0.1} 0 val_f1w=0.9337
+bi_min2_nosub True NaiveBayes {'alpha': 0.5} 0 val_f1w=0.9308
+bi_min2_nosub True NaiveBayes {'alpha': 1.0} 0 val_f1w=0.9255
+bi_min2_nosub True LogReg {'C': 0.1} 0 val_f1w=0.8489
+bi_min2_nosub True LogReg {'C': 1} 0 val_f1w=0.9182
+bi_min2_nosub True LogReg {'C': 10} 0 val_f1w=0.9402
+bi_min2_nosub True LogReg {'C': 100} 0 val_f1w=0.9435
+bi_min2_nosub True LinearSVC {'C': 0.1} 0 val_f1w=0.9243
+bi_min2_nosub True LinearSVC {'C': 0.5} 0 val_f1w=0.9458
+bi_min2_nosub True LinearSVC {'C': 1} 0 val_f1w=0.9472
+bi_min2_nosub True LinearSVC {'C': 5} 0 val_f1w=0.9472
+bi_min2_nosub True DecisionTree {'max_depth': 10} 42 val_f1w=0.8795
+bi_min2_nosub True DecisionTree {'max_depth': 10} 1 val_f1w=0.8771
+bi_min2_nosub True DecisionTree {'max_depth': 10} 2 val_f1w=0.8785
+bi_min2_nosub True DecisionTree {'max_depth': 50} 42 val_f1w=0.8879
+bi_min2_nosub True DecisionTree {'max_depth': 50} 1 val_f1w=0.8818
+bi_min2_nosub True DecisionTree {'max_depth': 50} 2 val_f1w=0.8832
+
+=== Cấu hình tốt nhất của mỗi mô hình (chọn theo val) ===
+       model           vec  stats            params  val_f1w  test_acc  test_f1w  test_f1w_std  prec_fake  rec_fake  overfit_gap  fit_s
+   LinearSVC bi_min2_nosub   True          {"C": 1}   0.9472    0.9491    0.9491        0.0000     0.9453    0.9480       0.0528 0.0200
+      LogReg       bi_min2   True        {"C": 100}   0.9448    0.9467    0.9467        0.0000     0.9432    0.9451       0.0552 0.1000
+  NaiveBayes       bi_min2   True    {"alpha": 0.1}   0.9346    0.9299    0.9299        0.0000     0.9248    0.9284       0.0525 0.0000
+DecisionTree      uni_min2   True {"max_depth": 50}   0.8919    0.8808    0.8807        0.0036     0.8886    0.8575       0.1081 0.4233
+
+=== Có / không có đặc trưng thống kê ===
+       model  stats           vec            params  val_f1w  test_f1w
+DecisionTree  False       bi_min2 {"max_depth": 50}   0.8830    0.8844
+DecisionTree   True      uni_min2 {"max_depth": 50}   0.8919    0.8807
+   LinearSVC  False bi_min2_nosub          {"C": 5}   0.9448    0.9486
+   LinearSVC   True bi_min2_nosub          {"C": 1}   0.9472    0.9491
+      LogReg  False bi_min2_nosub        {"C": 100}   0.9444    0.9444
+      LogReg   True       bi_min2        {"C": 100}   0.9448    0.9467
+  NaiveBayes  False       bi_min2    {"alpha": 0.1}   0.9313    0.9290
+  NaiveBayes   True       bi_min2    {"alpha": 0.1}   0.9346    0.9299
+
+Đã lưu: results/baseline_*.csv và results/c_curve.png

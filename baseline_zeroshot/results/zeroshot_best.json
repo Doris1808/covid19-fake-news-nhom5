@@ -1,0 +1,10 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "labelset": "reliable_misinfo",
+  "template": "The following post is {}.",
+  "test_acc_tau0.5": 0.6985981308411215,
+  "test_f1w_tau0.5": 0.6812319769643307,
+  "tau_tuned_on_val": 0.3,
+  "test_acc_tuned": 0.697196261682243,
+  "test_f1w_tuned": 0.696670998245676
+}
