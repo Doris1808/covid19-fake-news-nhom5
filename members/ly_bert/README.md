@@ -1,14 +1,14 @@
 # Đặng Thị Trúc Ly
 
-Phần phụ trách: BERT-base, huấn luyện 3 seed, đánh giá Test, phân tích lỗi, thử nghiệm câu ngoài và chuẩn bị demo (Chạy tay).
+Phần phụ trách: BERT-base, huấn luyện 3 seed, đánh giá Test (Precision/Recall, Confusion Matrix), phân tích lỗi, thử nghiệm câu ngoài và chuẩn bị demo (tích hợp id2label).
 
-Thư mục này dành cho code được tích hợp sau. Chứa mã nguồn (`.ipynb`), các file cấu hình (`config.json`, `training_args.bin`) và nhật ký kết quả của mô hình BERT. Tuân thủ quy định dùng chung split của nhóm, nhãn `fake=0`/`real=1`, tiêu chí chọn checkpoint tốt nhất là Validation F1 weighted. Các metric được ghi nhận trên thang 0–1. Không ghi đè thư mục kết quả của thành viên khác và tuyệt đối không commit file trọng số nặng (`model.safetensors`).
+Thư mục này dành cho code được tích hợp sau. Chứa mã nguồn (`Ly_Bert_2.ipynb`), các file cấu hình (`config.json`, `training_args.bin`) và nhật ký kết quả của mô hình BERT. Tuân thủ nghiêm ngặt quy định dùng chung split của nhóm, nhãn `fake=0`/`real=1`. Tiêu chí chọn checkpoint tốt nhất là Validation F1 weighted. Các metric được ghi nhận trên thang 0–1. Không ghi đè thư mục kết quả của thành viên khác và tuyệt đối không commit file trọng số nặng (`model.safetensors`).
 
 ---
 
 ## 1. Kết quả thực nghiệm (Đánh giá trên tập Validation và Test)
 
-Quá trình huấn luyện sử dụng mô hình `bert-base-uncased`, nhãn phân loại được map theo chuẩn chung (`fake=0`, `real=1`). Dữ liệu sử dụng chung split chuẩn của nhóm (6.420 mẫu Train / 2.140 mẫu Validation / 2.140 mẫu Test).
+Quá trình huấn luyện sử dụng mô hình `bert-base-uncased`, nhãn phân loại được cấu hình cứng vào metadata của mô hình thông qua `id2label` (`fake=0`, `real=1`) để đảm bảo tính đồng nhất. Mô hình được tinh chỉnh với `learning_rate=2e-5` và `weight_decay=0.01`. Dữ liệu sử dụng chung split chuẩn của nhóm (6.420 mẫu Train / 2.140 mẫu Validation / 2.140 mẫu Test).
 
 ### 1.1. Kết quả trên tập Validation (2.140 mẫu: 1.020 Fake, 1.120 Real)
 
@@ -21,7 +21,7 @@ Quá trình huấn luyện sử dụng mô hình `bert-base-uncased`, nhãn phâ
 
 ### 1.2. Kết quả trên tập Test cả 3 Seed (2.140 mẫu: 1.020 Fake, 1.120 Real)
 
-Đánh giá độc lập cả 3 seed trên tập Test (thang 0–1). *(Ghi chú: Hàm `compute_metrics` của BERT-base được cấu hình tập trung xuất ra 2 chỉ số quan trọng nhất của nhóm là Accuracy và F1 Weighted)*:
+Đánh giá độc lập cả 3 seed trên tập Test (thang 0–1). Mã nguồn đã được cấu hình để trích xuất đầy đủ Báo cáo phân loại (Classification Report) bao gồm Precision, Recall, F1 cho từng lớp và Ma trận nhầm lẫn (Confusion Matrix).
 
 | Seed | Split | Accuracy | F1 Weighted | Tổng số câu sai | Tỉ lệ lỗi |
 | --- | --- | --- | --- | --- | --- |
@@ -64,18 +64,6 @@ Sử dụng checkpoint **Seed 2024** để kiểm thử trên 7 câu tiếng Anh
 
 ## 3. Phần Demo (Nhập câu và trả nhãn trực tiếp trong Notebook)
 
-Để đáp ứng yêu cầu "Chạy tay" trực tiếp, hàm suy luận (Inference) đã được thiết kế tại ô code cuối cùng trong notebook `Ly_Bert_2.ipynb` (nạp checkpoint từ **Seed 2024**).
+Để đáp ứng yêu cầu "Chạy tay" trực tiếp và đảm bảo không xảy ra hiện tượng đảo nhãn khi deploy, hàm suy luận (Inference) đã được cập nhật.
 
-- **Cách hoạt động:** Hàm `predict_fake_news(text)` nhận trực tiếp câu tiếng Anh, thực hiện tokenize (`max_length=128`), nạp vào GPU và trả về nhãn dự đoán `Fake (Tin giả)` hoặc `Real (Tin thật)`.
-- **Ví dụ output thực tế:**
-  - **Input:** `"States reported 1121 deaths a small rise from last Tuesday. Southern states reported 640 of those deaths. https://t.co/YASGRTT4ux,"`
-  - **Dự đoán:** `=> Kết quả dự đoán: Real (Tin thật)`
-
----
-
-## 4. Hướng dẫn chạy code và Minh chứng
-
-- **Mã nguồn:** Toàn bộ quá trình từ Khởi tạo Tokenizer, Train 3 Seed, Đánh giá Test, Phân tích 42 lỗi Validation, Test 7 câu trên mạng và Live Demo đều được lưu trữ trực tiếp trong file notebook `Ly_Bert_2.ipynb`.
-- **Cài đặt thư viện:** `!pip install transformers datasets scikit-learn pandas numpy torch`
-- **Tái lập kết quả:** Dùng Google Colab (GPU T4). Bấm *Runtime > Run all* để chạy từ trên xuống dưới. Mô hình sẽ tự động trỏ vào `checkpoint-1206` của thư mục `bert_base_seed_2024` để báo cáo điểm cuối cùng.
-- **Trọng số mô hình (Checkpoint):** Tuân thủ quy tắc nhóm (không commit trọng số lớn), file mô hình nặng (`model.safetensors`, `optimizer.pt`...) không được tải lên kho chứa chung. Thư mục `.zip` đính kèm chứa file `config.json`, `trainer_state.json` và `training_args.bin` từ `checkpoint-1206` của seed 2024 đã được cung cấp để minh chứng cho toàn bộ quá trình thực nghiệm này.
+- **Đảm bảo đồng nhất nhãn (Label Consistency):** Hàm sử dụng trực tiếp cấu hình `best_model.config.id2label` đã được lưu cứng trong file `config.json` để ánh xạ dự đoán (0 -> Fake, 1 -> Real
