@@ -1,0 +1,70 @@
+{
+  "architecture": "distilbert",
+  "seed": 2024,
+  "smoke": false,
+  "val": {
+    "accuracy": 0.9714953271028037,
+    "f1_weighted": 0.9715004340155138,
+    "f1_macro": 0.9714436905409577,
+    "f1_fake": 0.9702293801854563,
+    "confusion_matrix_fake_real": [
+      [
+        994,
+        26
+      ],
+      [
+        35,
+        1085
+      ]
+    ],
+    "classification_report": {
+      "fake": {
+        "precision": 0.9659863945578231,
+        "recall": 0.9745098039215686,
+        "f1-score": 0.9702293801854563,
+        "support": 1020.0
+      },
+      "real": {
+        "precision": 0.9765976597659766,
+        "recall": 0.96875,
+        "f1-score": 0.972658000896459,
+        "support": 1120.0
+      },
+      "accuracy": 0.9714953271028037,
+      "macro avg": {
+        "precision": 0.9712920271618999,
+        "recall": 0.9716299019607844,
+        "f1-score": 0.9714436905409577,
+        "support": 2140.0
+      },
+      "weighted avg": {
+        "precision": 0.9715399539190998,
+        "recall": 0.9714953271028037,
+        "f1-score": 0.9715004340155138,
+        "support": 2140.0
+      }
+    }
+  },
+  "n_train": 6420,
+  "n_val": 2140,
+  "train_seconds_this_session": 251.2183010169997,
+  "resumed": false,
+  "peak_cuda_allocated_gib": 1.350278377532959,
+  "environment": {
+    "python": "3.13.15",
+    "os": "Linux-6.18.48+-x86_64-with-glibc2.39",
+    "sklearn": "1.6.1",
+    "pandas": "2.3.3",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.1",
+    "device": "cuda:0",
+    "gpu_name": "Tesla T4",
+    "n_gpu": 1
+  },
+  "best_checkpoint": "/kaggle/working/covid19-fake-news-nlp/outputs/distilbert/seed_2024/checkpoints/checkpoint-603",
+  "effective_batch_size": 32,
+  "dataset_sha256": {
+    "train": "ea96f390a6b019f5415805289c11e7d9744395a97b4ed6b80128e457deb199cf",
+    "val": "cd70dea7107760d85163e25348754a015601c1e24588d38ecd253b05ea459a55"
+  }
+}

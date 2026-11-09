@@ -1,0 +1,22 @@
+{
+  "model_name": "distilbert/distilbert-base-uncased",
+  "seeds": [
+    42,
+    123,
+    2024
+  ],
+  "epochs": 4,
+  "learning_rate": 2e-05,
+  "max_length": 128,
+  "train_batch_size": 8,
+  "eval_batch_size": 16,
+  "gradient_accumulation_steps": 4,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "seed": 42,
+  "smoke": false,
+  "dataset_sha256": {
+    "train": "ea96f390a6b019f5415805289c11e7d9744395a97b4ed6b80128e457deb199cf",
+    "val": "cd70dea7107760d85163e25348754a015601c1e24588d38ecd253b05ea459a55"
+  }
+}
