@@ -1,0 +1,11 @@
+id,sentence,true_label,pred_label,confidence_%,correct
+1,WHO recommends washing your hands frequently with soap and water to reduce the risk of infection.,Real (1),Fake (0),99.63,False
+2,Wearing a mask in crowded indoor places can help reduce the spread of COVID-19.,Real (1),Fake (0),99.97,False
+3,"The health ministry reported 1,250 new confirmed COVID-19 cases and 14 deaths in the last 24 hours.",Real (1),Fake (0),99.87,False
+4,Vaccines are approved only after clinical trials show they are safe and effective.,Real (1),Fake (0),99.89,False
+5,"People with symptoms such as fever, cough or loss of taste or smell should get tested and isolate.",Real (1),Fake (0),98.74,False
+6,Drinking bleach or disinfectant kills the coronavirus inside your body.,Fake (0),Fake (0),99.98,True
+7,"5G mobile towers spread the coronavirus, so they must be shut down immediately.",Fake (0),Fake (0),99.98,True
+8,Eating raw garlic every morning completely prevents COVID-19 infection.,Fake (0),Fake (0),99.98,True
+9,Breaking: the government is hiding a secret cure for coronavirus that works in 24 hours.,Fake (0),Fake (0),99.98,True
+10,COVID-19 vaccines contain microchips that let the government track everyone.,Fake (0),Fake (0),99.98,True

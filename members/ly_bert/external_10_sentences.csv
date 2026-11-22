@@ -1,0 +1,11 @@
+﻿id,label,sentence
+1,real,WHO recommends washing your hands frequently with soap and water to reduce the risk of infection.
+2,real,Wearing a mask in crowded indoor places can help reduce the spread of COVID-19.
+3,real,"The health ministry reported 1,250 new confirmed COVID-19 cases and 14 deaths in the last 24 hours."
+4,real,Vaccines are approved only after clinical trials show they are safe and effective.
+5,real,"People with symptoms such as fever, cough or loss of taste or smell should get tested and isolate."
+6,fake,Drinking bleach or disinfectant kills the coronavirus inside your body.
+7,fake,"5G mobile towers spread the coronavirus, so they must be shut down immediately."
+8,fake,Eating raw garlic every morning completely prevents COVID-19 infection.
+9,fake,Breaking: the government is hiding a secret cure for coronavirus that works in 24 hours.
+10,fake,COVID-19 vaccines contain microchips that let the government track everyone.

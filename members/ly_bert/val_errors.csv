@@ -1,0 +1,73 @@
+index,true_label,pred_label,confidence_%,tweet
+13,Real (1),Fake (0),99.85,Tomorrow April 6 we will pass 10000 coronavirus deaths. We passed 5000 on April 2. We passed 1000 on March 26. We passed 100 on March 18.
+49,Fake (0),Real (1),91.74,A coronavirus vaccine: Where does it stand? Experts we checked with remain optimistic about a vaccine in the first quarter of 2021. https://t.co/XAwbq9IqrH https://t.co/ONglQMMwFc
+61,Fake (0),Real (1),99.92,"The Global #dietarysupplements market is anticipated to grow at a #CAGR of around 7.50% during 2020-25. 
+Check the full report:- https://t.co/71J6LqCvgr
+
+#food #beverage #marketresearch #marketstrategy #USA #animalhusbandry #covid_19 #kerrygroup #nutrients #Immunity #Energy https://t.co/XPFXA1zzo7"
+145,Fake (0),Real (1),99.55,There is no evidence that children have died because of a COVID-19 vaccine. No vaccine currently in development has been approved for widespread public use. https://t.co/9ecvMR8SAf
+190,Fake (0),Real (1),94.27,"We need to develop a digital certificate that shows who has received all
+the vaccinations. Only those with all the required vaccinations may 
+travel, visit churches, participate in sports and music events, get a 
+job, etc."
+230,Fake (0),Real (1),97.24,No one should have to pay for coronavirus treatment. Period. https://t.co/GBchrVZmDz
+305,Fake (0),Real (1),99.83,The Canadian government has not enacted a law that criminalizes COVID-19 restrictions or prevents enforcement of those guidelines. https://t.co/c7IST1A1ip
+407,Real (1),Fake (0),99.67,A reminder about maintaining good hygiene: wash your hands often cough or sneeze into your elbow and stay at home if you’re unwell.
+482,Real (1),Fake (0),99.79,"Lingering damage caused by COVID suggests thousands of “Long-Haulers"" in the U.S. have been sick for extended periods of time. Doctors believe there to be a possible connection to Myalgic encephalomyelitis/chronic fatigue syndrome (ME/CFS) @Atlantic https://t.co/oYeOkbYZrr"
+613,Real (1),Fake (0),96.03,Q: How do I clean fruits and vegetables during #COVID19? A: • Do NOT wash produce with soap disinfectant or any other chemical. • Rinse fruits and vegetables under cold running tap water. • Scrub uncut firm produce with a clean brush. https://t.co/h6bNriqVop https://t.co/UePnhL9znm
+688,Fake (0),Real (1),99.54,RT @JNInstitute: The Judith Neilson Institute is working with @ABCFactCheck to tackle misinformation during the #COVID19 pandemic. https:…
+734,Fake (0),Real (1),98.97,Health officials caution against the use of chloroquine or hydroxychloroquine to treat COVID-19 patients citing the possibility of serious side effects. There are currently no approved treatments for the virus. https://t.co/ryiVuPdNSS
+757,Fake (0),Real (1),99.24,"How has alcohol consumption changed during lockdown? Read our latest #CPD article for more information on how drinking habits have changed during the pandemic and the short-term and long-term effects of alcohol misuse
+@Drinkaware @AlcoholChangeUK 
+
+https://t.co/jNV645L7Il https://t.co/gGpNZShIPl"
+815,Fake (0),Real (1),93.88,"@JohnRentoul The virus is out there, world wide. No amount of local or national lockdown will contain it, maybe slow it down a tad whilst we’re shut indoors but then it’ll be back."
+838,Fake (0),Real (1),99.61,#VitaminD is now in focus to prevent #Coronavirus . Know if your body has enough of it. https://t.co/OFWcLha5ef
+898,Real (1),Fake (0),98.08,Noel Gallagher says he refuses to wear a face mask while shopping as he goes against laws brought in during the pandemic to curb the spread of #coronavirus https://t.co/HkXZMeyeh6
+921,Fake (0),Real (1),99.66,RT @dpfunke: A data table from the World Bank is causing a lot of confusion about coronavirus testing equipment. To be clear: COVID-19 tes…
+946,Fake (0),Real (1),99.3,"#Coronavirus Update: Continuous screening of passengers coming from China, Hong Kong, Singapore & Thailand is being done at #KolkataAirport at four dedicated aerobridges with health check-up facilities."
+965,Fake (0),Real (1),99.86,We're still a long way away from herd immunity from COVID-19 in the United States. https://t.co/kVXlIkeDRa https://t.co/RC3BNj0ktG
+978,Fake (0),Real (1),99.86,"Navigating immunosuppression during the pandemic continues to challenge patients and providers. Thanks to the Medical Dermatology Society and Society of Dermatology Hospitalists, here is an article to help navigate these difficult decisions. https://t.co/Xg4NTCwML9 https://t.co/vW8zvceTus"
+993,Fake (0),Real (1),99.4,"When WWN is not bringing you the latest on Covid-19, it will be bringing you The Distraction Zone.
+
+Save, bookmark and ignore social distancing to keep close to the following link as each day we'll bring you necessary non-news news:
+
+https://t.co/8MQCHs3fqk"
+1047,Real (1),Fake (0),96.9,Noel Gallagher says he refuses to wear a face mask while shopping as he goes against laws brought in during the pandemic to curb the spread of #coronavirus https://t.co/sPp08WBRfO
+1061,Real (1),Fake (0),99.97,#ZuckOff #TakeItFromADoctor and a video with false claims on mask wearing and #hydroxychloroquine. https://t.co/0WH13B5iqT https://t.co/04eETBikNd
+1063,Real (1),Fake (0),99.92,Hollywood actor Paul Rudd has encouraged young people to wear face masks in an entertaining video as the US grapples with the #COVID19 pandemic https://t.co/0uEqyLlCna
+1099,Fake (0),Real (1),94.82,"#Covaxin, India's indigenous #Covid19 vaccine is developed by @BharatBiotech in collaboration with @icmr_niv. Preclinical studies with small and large animals successfully completed. Phase 1 human clinical trial completed. Phase 2 human clinical trial ongoing."
+1104,Fake (0),Real (1),96.39,Axel Kicillof (Governor of the Province of Buenos Aires): 80 days after the first case Argentina has 10000 cases; Chile 60 thousands and Brazil 200 thousands.
+1218,Real (1),Fake (0),85.32,The U.S. has surpassed over 1 million confirmed cases of coronavirus according to data compiled by John Hopkins University https://t.co/KOidmKuxic
+1288,Fake (0),Real (1),98.93,"How South Korea Successfully Managed Coronavirus
+https://t.co/ImojhnSrgm
+The nation fast-tracked approval of domestic testing kits as soon as cases began hitting."
+1312,Fake (0),Real (1),99.93,"Sources confirm COVID 19 Vaccine Needs at least 6 to 10m for Clinical Trials on more than 5000 But @ICMR Choosing only 1100 +ve Patients &amp; Eager to complete Before August 15,2020 means...? https://t.co/7X8fUIMAcb https://t.co/X6Fu7Pk4oB"
+1338,Fake (0),Real (1),87.08,“If we stopped testing right now we'd have very few cases if any.”
+1435,Real (1),Fake (0),97.47,We could see 100K #coronavirus cases a day Fauci says at Senate hearing. https://t.co/3oVjbEnn3f
+1440,Fake (0),Real (1),99.87,Children do contract the coronavirus but current research shows it is happening at a much lower rate than for adults. https://t.co/GW4aSvUOst
+1464,Fake (0),Real (1),98.82,No wearing a mask to guard against spreading the coronavirus doesn’t void concealed-carry permits. https://t.co/nuJMpcPzsW
+1507,Fake (0),Real (1),99.46,"PM @ScottMorrisonMP recently said a #COVID19 vaccine would be ""as mandatory as you can possibly make it"". But what does that mean? Experts we spoke to said it was unlikely the vaccination could be forced upon the population in Australia. Here's why: https://t.co/8axB6BPplC https://t.co/tb5CpYQiIr"
+1553,Real (1),Fake (0),99.95,India conducts one million COVID-19 tests in the last 24 hours https://t.co/H4bobDsjsP
+1566,Real (1),Fake (0),99.71,There is no one in New Zealand receiving hospital-level care for COVID-19.
+1586,Fake (0),Real (1),99.88,A @Target spokesperson said the company plans to continue “Heroes &amp; Helpers” an event that pairs underserved children with officers to shop for holiday gifts. The company says careful considerations are underway on how to manage the event amid COVID-19. https://t.co/WdHJ3zkMQn
+1591,Fake (0),Real (1),94.21,At this Critical Scenario We need full fledged 25 teams of 100 lab technicians under 2 MicroBiologists (for Virtual Administration) needed. Train All Graduate teachers of KA to test COVID 19 Samples We can do this ..@BSYBJP @mla_sudhakar @csogok @ChangeOrg_India @narendramodi https://t.co/EV2r2fOkeh
+1717,Fake (0),Real (1),93.68,New fears for Boris mental health as he claims covid is a bioweapon triggered by sound. https://t.co/7Hls3SeuJl
+1735,Fake (0),Real (1),99.87,"Commonly used drugs hydroxychloroquine and chloroquine should be safe in trials to prevent COVID-19, an @NIHRresearch-supported study has reported. Read more: https://t.co/JZCYEKqn94 #prioritycovidresearch https://t.co/h1Gkuvtl4w"
+1765,Fake (0),Real (1),99.7,A list of medical exports is causing a lot of confusion about coronavirus testing equipment. To be clear: COVID-19 tests did not exist in 2018. https://t.co/g2z10cl6W3
+1790,Fake (0),Real (1),99.88,"3/3 ... at the start was reasonably necessary"" ""But it's much more difficult now the huge numbers of coronavirus cases have reduced significantly and there's little commun­ity transmission … to argue you still need those borders shut."" Quote source: https://t.co/NQ7fSUVUwQ"
+1799,Fake (0),Real (1),99.47,The number of deaths from respiratory illnesses in Ireland this year is comparable to previous years and COVID-19 is not causing any more deaths than would usually be happening
+1866,Real (1),Fake (0),99.89,@CryptoWalter_ There is a provision Rs. 50 lakhs as insurance under PM Garib Kalyan Package to the family of a frontline healthcare worker who passed away due to #COVID19: https://t.co/7ugCXToQO8
+1899,Fake (0),Real (1),99.02,"It’s being reported that NC DHHS is telling hospitals that if they decide to do elective surgeries, they won’t be eligible to receive PPE from the state. The heavy hand of government. I hope Secretary Cohen will reverse course. #NCDHHS #COVID19NC #ncpol"
+1908,Fake (0),Real (1),99.91,While uncomfortable there no evidence that getting a COVID-19 test could cause anything more serious than temporary irritation. https://t.co/8Fq1yLo7wU
+1913,Fake (0),Real (1),99.8,BREAKING: Coleen Rooney confirms she has launched her own investigation into whether China tried to cover up the coronavirus outbreak https://t.co/ToBfpHYFmK
+1920,Fake (0),Real (1),99.84,"Angiotensin-converting enzyme 2 (ACE2): COVID 19 gate way to multiple organ failure syndromes. https://t.co/cHRmWFf0vF 
+
+#TheWiderWiserView https://t.co/q9hnaqU6jE"
+1930,Fake (0),Real (1),99.69,If you maintain social distancing indoors there's no reason to have an additional mask on top of that.
+1991,Fake (0),Real (1),99.36,This data table from the World Bank does not show that countries were exporting COVID-19 tests in 2018 https://t.co/g2z10cl6W3
+2051,Fake (0),Real (1),99.91,All Missouri businesses can open Monday May 4 under our new Order as long as new guidelines are followed.
+2061,Fake (0),Real (1),64.49,“Per order from @GovWhitmer people in Michigan are now banned from purchasing a new baby car seat in stores.”
+2103,Fake (0),Real (1),97.89,Victoria has received a lot of attention for extending its state of emergency. But it's the only state which needs to go to Parliament to do so. Other states have been quietly extending theirs with no parliamentary scrutiny: https://t.co/ljSZwObpsR #auspol #coronavirusFacts https://t.co/jDWBWgxp4E
+2107,Real (1),Fake (0),96.29,ICYMI: Deborah Birx 3/8/20 White House Briefing: “I know many of you are watching the [Covid] Act Now model and the IHME model from — and they have consistently decreased the number...That is modeled on what America is doing. That’s what’s happening.” https://t.co/IDhKGPjgWB
+2138,Fake (0),Real (1),99.35,Birx says COVID-19 outbreak not under control because ‘people are on the move’ https://t.co/YFqi6f7Rvj
