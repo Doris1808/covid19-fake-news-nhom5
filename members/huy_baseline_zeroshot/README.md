@@ -1,5 +1,10 @@
-# Vũ Hồng Huy
+# 01 · Baseline và zero-shot
+**Vũ Hồng Huy · 24DH113458**
 
-Phần phụ trách: bài báo, EDA, TF-IDF baseline A và BART-MNLI zero-shot B.
+Notebook khảo sát phân bố nhãn, chuẩn hóa văn bản và so sánh ba phương án trên Test gốc. Với LinearSVC, Huy chọn `C=3` theo Validation. SVM gốc đạt **0,9503 F1 macro** trên Test, biến thể bổ sung n-gram ký tự đạt **0,9611**. Phần zero-shot dùng `facebook/bart-large-mnli` và mẫu giả thuyết `This is {}.`. F1 macro Test là **0,4500**, recall lớp fake là **0,1069**.
 
-Thư mục này dành cho code được tích hợp sau. Thêm README hướng dẫn chạy, notebook hoặc module, config, kết quả thật và nhật ký. Dùng chung split với nhóm, nhãn fake=0/real=1, chọn checkpoint bằng Validation F1 weighted. Ghi metric trên thang 0–1 và ghi rõ split. Không ghi đè thư mục kết quả của thành viên khác.
+[Xem notebook và output](01_Baseline_ZeroShot.ipynb) · [Mở Colab](https://colab.research.google.com/github/Doris1808/covid19-fake-news-nhom5/blob/main/members/huy_baseline_zeroshot/01_Baseline_ZeroShot.ipynb) · [Bảng điểm](results/metrics.csv)
+
+Để chạy lại trên Colab, tải cùng lúc `train.csv`, `val.csv`, `test.csv` ở ô đầu. Các phần SVM chạy được trên CPU. Phần 8 tải BART-MNLI và nên dùng GPU. Xem phần 5 để đối chiếu mẫu trùng và 10 câu minh họa.
+
+[Dữ liệu dùng chung](../../data/raw) · [Bảng so sánh nhóm](../../reports/README.md)

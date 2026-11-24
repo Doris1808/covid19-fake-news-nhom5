@@ -10,17 +10,15 @@ Nhóm sử dụng bài toán này để tìm hiểu quá trình chuyển văn b�
 
 ## Các câu hỏi cần trả lời bằng thực nghiệm
 
-1. DistilBERT có cải thiện F1 weighted so với baseline A và zero-shot B của nhóm không?
+1. DistilBERT, baseline A và zero-shot B khác nhau thế nào trên cùng tập Test khi đo bằng F1 macro?
 2. Kết quả giữa seed 42, 123, 2024 có ổn định không?
 3. Những mẫu dự đoán sai có đặc điểm gì: văn bản dài, phủ định, trích dẫn hay thiếu ngữ cảnh?
 4. Chi phí chạy có phù hợp với tài nguyên nhóm được cấp không?
 
-## Dữ liệu
+## Dữ liệu của bài nộp
 
-Dùng các tập Train, Validation, Test có sẵn của CONSTRAINT@AAAI2021. Thống kê tham khảo từ bài báo: 6.420 / 2.140 / 2.140 mẫu. Đây không phải kết quả EDA của lần chạy hiện tại. Sau khi tải, dùng `python -m src.eda` để tạo số liệu từ CSV và giữ file nguồn/checksum.
+Ba tệp trong [data/raw](../data/raw) có 6.420 dòng Train, 2.140 dòng Validation và 2.140 dòng Test. [Notebook DistilBERT](../members/quan_distilbert/02_DistilBERT.ipynb) đếm nhãn trực tiếp và đối chiếu SHA-256 với hồ sơ thực nghiệm. Mã tải dữ liệu trước đây dùng [bản sao CSV trên Hugging Face](https://huggingface.co/datasets/nanyy1025/covid_fake_news).
 
-Code tải bản sao cộng đồng trên Hugging Face, không gọi đó là kho phát hành chính thức. Cần đối chiếu với dữ liệu nhóm thống nhất trước khi train. Dữ liệu không được đóng gói trong repository này.
+## Đọc số liệu
 
-## Cách diễn giải kết quả
-
-So sánh các mô hình trên cùng split và cùng metric. Báo cáo F1 weighted, Accuracy, F1 macro và F1 fake; đọc thêm ma trận nhầm lẫn để biết lỗi tập trung vào nhãn nào. Thảo luận giới hạn về nguồn dữ liệu, thời điểm thu thập và khả năng mô hình học dấu hiệu phong cách thay vì xác minh sự kiện. Nhóm bổ sung nhận xét riêng sau khi đọc bài báo đầy đủ và xem kết quả thực chạy.
+[Bảng tổng hợp](../reports/README.md) dùng cùng tập Test gốc và cùng loại F1. Phần ngoài bộ Test và phép kiểm tra sau lọc trùng có số mẫu riêng. Các đầu ra là dự đoán theo nhãn của bộ dữ liệu nghiên cứu.

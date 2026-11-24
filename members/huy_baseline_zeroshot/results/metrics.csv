@@ -1,0 +1,5 @@
+method,split,n,accuracy,f1_macro
+LinearSVC (word),val,2140,0.9481,0.9479
+LinearSVC (word),test,2140,0.9505,0.9503
+LinearSVC (word + char),test,2140,0.9612,0.9611
+Zero-shot BART-MNLI,test,2140,0.571,0.45

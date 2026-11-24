@@ -1,0 +1,7 @@
+method,test_n,runs,accuracy,f1_macro,f1_macro_sample_sd,f1_weighted,f1_weighted_sample_sd
+LinearSVC (word),2140,1,0.9505,0.9503,,,
+LinearSVC (word + char),2140,1,0.9612,0.9611,,,
+Zero-shot BART-MNLI,2140,1,0.571,0.45,,,
+DistilBERT,2140,3,0.97165109,0.97158293,0.00178199,0.97164763,0.00177374
+BERT-base,2140,3,0.97445483,0.97437858,0.0015073,0.97444386,0.00150319
+RoBERTa-base,2140,5,0.97495327,0.97487974,0.0017441,0.974943,0.00173833

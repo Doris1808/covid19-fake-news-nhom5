@@ -1,0 +1,8 @@
+Nhóm lỗi,Số câu mắc phải,Tỉ lệ trên tổng lỗi (%),Nguyên nhân,Quyết định,Hướng cải tiến đề xuất
+5_Tin_gia_giong_bao_chi_co_URL_so_lieu,34,73.9,"Tin giả mượn lối tắt URL, @mention, RT, số liệu giống tin thật",CẦN THIẾT KẾ CẢI TIẾN,Áp dụng Shortcut Dropout (ẩn ngẫu nhiên URL/RT/hashtag khi train)
+3_Cau_chua_phu_dinh,12,26.1,Bài thật dùng từ phủ định bác bỏ tin đồn (chứa từ khóa tin giả),CẦN THIẾT KẾ CẢI TIẾN,Tăng cường mẫu đối lập phủ định / tinh chỉnh ngưỡng phân loại
+1_Ky_tu_dac_biet_Emoji_HTML,10,21.7,"Nhiễu thực thể HTML (&amp;), ký tự non-ASCII/emoji",CẦN THIẾT KẾ CẢI TIẾN,Giải mã HTML & chuẩn hóa ký tự nhiễu trước khi tokenize
+2_Cau_ngan_hoac_bi_cat_cut,9,19.6,Thiếu ngữ cảnh do câu quá ngắn hoặc bị cắt cụt (...),CẦN THIẾT KẾ CẢI TIẾN,Khó sửa chỉ bằng tiền xử lý; cần thu thập đầy đủ bài viết gốc
+4_Cau_hoi_hoac_cam_than,6,13.0,Dấu ? và ! thiên lệch mạnh về lớp Fake trong dữ liệu gốc,CẦN THIẾT KẾ CẢI TIẾN,Giảm phụ thuộc dấu câu bề mặt & hiệu chỉnh ngưỡng quyết định
+7_Loi_ngu_nghia_hoac_can_factcheck_ngoai,3,6.5,Đòi hỏi tri thức kiểm chứng sự thật ngoài văn bản,"Ít mẫu (<=3), ưu tiên thấp",Kết hợp truy xuất tri thức ngoài (RAG / Fact-checking API)
+6_Tin_that_viet_tron_thieu_URL_hashtag,2,4.3,"Tin thật viết trơn, không có URL/hashtag (giống câu ngoài dữ liệu)","Ít mẫu (<=3), ưu tiên thấp",Áp dụng Shortcut Dropout để mô hình không ép câu thiếu URL thành Fake

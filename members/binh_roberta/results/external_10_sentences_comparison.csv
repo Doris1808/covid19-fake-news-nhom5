@@ -1,0 +1,11 @@
+id,true_label,orig_pred,orig_P_real,orig_ok,improved_pred,improved_P_real,improved_ok,sentence
+1,real,fake,0.0006,SAI,fake,0.0009,SAI,WHO recommends washing your hands frequently with soap and water to reduce the risk of infection.
+2,real,fake,0.0004,SAI,fake,0.0524,SAI,Wearing a mask in crowded indoor places can help reduce the spread of COVID-19.
+3,real,fake,0.0018,SAI,fake,0.0007,SAI,"The health ministry reported 1,250 new confirmed COVID-19 cases and 14 deaths in the last 24 hours."
+4,real,fake,0.0005,SAI,real,0.796,ĐÚNG,Vaccines are approved only after clinical trials show they are safe and effective.
+5,real,fake,0.0009,SAI,real,0.9993,ĐÚNG,"People with symptoms such as fever, cough or loss of taste or smell should get tested and isolate."
+6,fake,fake,0.0003,ĐÚNG,fake,0.0003,ĐÚNG,Drinking bleach or disinfectant kills the coronavirus inside your body.
+7,fake,fake,0.0003,ĐÚNG,fake,0.0003,ĐÚNG,"5G mobile towers spread the coronavirus, so they must be shut down immediately."
+8,fake,fake,0.0003,ĐÚNG,fake,0.0003,ĐÚNG,Eating raw garlic every morning completely prevents COVID-19 infection.
+9,fake,fake,0.0004,ĐÚNG,fake,0.0004,ĐÚNG,Breaking: the government is hiding a secret cure for coronavirus that works in 24 hours.
+10,fake,fake,0.0003,ĐÚNG,fake,0.0002,ĐÚNG,COVID-19 vaccines contain microchips that let the government track everyone.

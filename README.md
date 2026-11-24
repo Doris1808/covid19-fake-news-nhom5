@@ -1,83 +1,32 @@
-# XỬ LÝ NGÔN NGỮ TỰ NHIÊN
-## PHÁT HIỆN TIN GIẢ VỀ COVID-19 (CONSTRAINT@AAAI2021)
+# Phát hiện tin giả về COVID-19
+**Đồ án Xử lý ngôn ngữ tự nhiên · Nhóm 5 · HUFLIT**  
+Giảng viên hướng dẫn **ThS. Trần Thị Thanh Thảo**
 
-**Nhóm 5 · HUFLIT · Giảng viên: ThS. Trần Thị Thanh Thảo**
+Nhóm so sánh cách phân loại bài đăng tiếng Anh thành hai nhãn `fake` và `real` trên bộ CONSTRAINT@AAAI2021. Có **6.420 bài Train**, **2.140 bài Validation** và **2.140 bài Test**.
 
-Đồ án phân loại bài đăng tiếng Anh về COVID-19 thành `fake` hoặc `real`. Nhóm khảo sát baseline TF-IDF, zero-shot và fine-tune ba mô hình Transformer để so sánh kết quả cùng chi phí tính toán.
+## Bốn phần của đồ án
 
-### Thành viên
+Mở **Xem bài** để đọc code và output ngay trên GitHub. Cột cuối dẫn tới số liệu của từng phần.
 
-| Sinh viên | MSSV | Phần phụ trách |
-|---|---|---|
-| Vũ Hồng Huy | 24DH113458 | Bài báo, EDA, baseline A, zero-shot B, tổng hợp số liệu |
-| Lương Hoàng Bảo Quân | 24DH111520 | DistilBERT, 3 seed, thời gian/GPU |
-| Đặng Thị Trúc Ly | 24DH112737 | BERT-base, 3 seed, phân tích lỗi |
-| Lê Nguyễn Ngọc Bình | 24DH113442 | RoBERTa-base, 3 seed, demo |
+| Phần | Thành viên · MSSV | Notebook | Bảng kết quả |
+|---|---|---|---|
+| **01 · Baseline & zero-shot** | Vũ Hồng Huy · 24DH113458 | [Xem bài](members/huy_baseline_zeroshot/01_Baseline_ZeroShot.ipynb) | [Mở kết quả](members/huy_baseline_zeroshot/results/metrics.csv) |
+| **02 · DistilBERT** | Lương Hoàng Bảo Quân · 24DH111520 | [Xem bài](members/quan_distilbert/02_DistilBERT.ipynb) | [Mở kết quả](reports/distilbert/metrics_3_seeds.csv) |
+| **03 · BERT-base** | Đặng Thị Trúc Ly · 24DH112737 | [Xem bài](members/ly_bert/03_BERT.ipynb) | [Mở kết quả](members/ly_bert/results/metrics_3_seeds.csv) |
+| **04 · RoBERTa-base** | Lê Nguyễn Ngọc Bình · 24DH113442 | [Xem bài](members/binh_roberta/04_RoBERTa.ipynb) | [Mở kết quả](members/binh_roberta/results/roberta_test_5seeds_summary.csv) |
 
-### Tình trạng mã nguồn
+## Kết quả trên 2.140 bài Test
 
-Bản này triển khai trước phần DistilBERT của Quân: chuẩn bị dữ liệu, train một seed, lưu checkpoint, đánh giá và tổng hợp kết quả. Có giao diện Streamlit tối thiểu để gắn checkpoint sau khi train. Các thư mục trong `members/` dành cho phần bổ sung của các thành viên; chưa có kết quả A/B hoặc BERT/RoBERTa trong bản này.
+![F1 macro Test từ 0,4500 của zero-shot đến 0,9749 của RoBERTa. Số liệu chi tiết ở mục So sánh kết quả.](reports/figures/so_sanh_f1_macro.png)
 
-Chưa kèm dữ liệu thô, trọng số hoặc kết quả fine-tune. Có code không đồng nghĩa đã hoàn thành thực nghiệm. Xem [tiến độ](docs/TIEN_DO.md).
+Bổ sung n-gram ký tự nâng F1 macro của SVM từ **0,9503** lên **0,9611**. Trong ba mô hình fine-tune, F1 macro trung bình nằm trong khoảng **0,9716–0,9749**. BERT và RoBERTa chênh khoảng **0,0005** theo các lượt chạy đã lưu. Zero-shot chỉ phát hiện được khoảng **10,7%** số bài mang nhãn fake ở cách đặt giả thuyết đã thử.
 
-### Bắt đầu
+[Bảng Accuracy, F1 macro và F1 weighted kèm cách tính](reports/README.md) · [Tải số liệu CSV](reports/so_sanh_test.csv)
 
-1. Mã nguồn của nhóm: https://github.com/Doris1808/covid19-fake-news-nhom5. Xem [hướng dẫn GitHub](docs/GITHUB.md) để tải về hoặc cập nhật.
-2. Mở [notebook DistilBERT](notebooks/01_DistilBERT_Kaggle.ipynb) trên Kaggle; link repository đã được điền sẵn.
-3. Chạy thử, rồi train lần lượt seed `42`, `123`, `2024`.
-4. Tải kết quả về và chạy giao diện trên Mac theo [hướng dẫn](docs/KAGGLE_VA_MAC.md).
+## Mở và chạy lại
 
-### Cấu trúc
+- **Xem phần DistilBERT của Quân** bằng chế độ `xem` để đọc ba seed trên CPU. [Mở trên Colab](https://colab.research.google.com/github/Doris1808/covid19-fake-news-nhom5/blob/main/members/quan_distilbert/02_DistilBERT.ipynb) · [Phiên Kaggle gốc đã lưu output](members/quan_distilbert/minh_chung/Phien_Kaggle_seed42.ipynb)
+- **Chạy lại các thí nghiệm** theo hướng dẫn dữ liệu, GPU và checkpoint của từng thành viên. [Hướng dẫn chạy](docs/HUONG_DAN_CHAY.md)
+- **Tải toàn bộ mã nguồn, dữ liệu và minh chứng** trong một file. [Tải ZIP từ GitHub](https://github.com/Doris1808/covid19-fake-news-nhom5/archive/refs/heads/main.zip)
 
-| Đường dẫn | Nội dung |
-|---|---|
-| `configs/distilbert.json` | Cấu hình chung cho ba seed |
-| `notebooks/01_DistilBERT_Kaggle.ipynb` | Các bước chạy trên Kaggle |
-| `src/download_data.py`, `src/eda.py` | Tải dữ liệu và thống kê hỗ trợ |
-| `src/finetune.py` | Train DistilBERT, chọn checkpoint bằng Validation |
-| `src/evaluate.py`, `src/summarize.py` | Đánh giá Test riêng và tổng hợp Validation |
-| `src/predict.py`, `app.py` | Nạp checkpoint và giao diện thử nghiệm |
-| `members/` | Nơi các bạn đưa phần code riêng lên sau |
-| `docs/` | Bài báo, hướng dẫn, phân công, quy trình thực nghiệm |
-| `outputs/` | Kết quả tạo sau khi thực thi |
-| `reports/` | Báo cáo và minh chứng nhóm bổ sung |
-
-### Chạy bằng terminal
-
-Python 3.11 được đề xuất. Chạy các lệnh tại thư mục chứa README này.
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-python -m src.download_data
-python -m src.eda
-python -m src.finetune --seed 42 --smoke
-python -m src.finetune --seed 42
-python -m src.finetune --seed 123
-python -m src.finetune --seed 2024
-python -m src.summarize
-python -m streamlit run app.py
-```
-
-Cấu hình mặc định hướng tới một GPU trên Kaggle. Mac bộ nhớ ít nên dùng cấu hình riêng theo hướng dẫn, không mặc định chạy toàn bộ các lệnh train trên Mac.
-
-### Quy tắc thực nghiệm
-
-- Giữ nguyên Train/Validation/Test; không chia lại ngẫu nhiên.
-- Nhãn thống nhất: `fake=0`, `real=1`.
-- Chọn checkpoint theo **Validation F1 weighted**; ghi thêm Accuracy, F1 macro, F1 fake.
-- Không dùng điểm Test để chọn epoch, seed hay siêu tham số.
-- Ba seed dùng cùng cấu hình. Chỉ tính mean ± std khi đủ ba seed hợp lệ.
-- Lượt `--smoke` dùng ít mẫu để kiểm tra phần mềm, không đưa vào bảng kết quả nghiên cứu.
-- Giữ nguồn dữ liệu, SHA256, log và cấu hình cùng kết quả. Không commit token, môi trường ảo hay trọng số lớn.
-
-### Nguồn tham khảo
-
-- Patwa và cộng sự, *Fighting an Infodemic: COVID-19 Fake News Dataset*: https://arxiv.org/abs/2011.03327
-- Kho của tác giả: https://github.com/parthpatwa/covid19-fake-news-detection
-- Bản sao CSV được code sử dụng: https://huggingface.co/datasets/nanyy1025/covid_fake_news/tree/main
-- Sanh và cộng sự, *DistilBERT, a distilled version of BERT*: https://arxiv.org/abs/1910.01108
-- API Trainer của phiên bản được chỉ định: https://huggingface.co/docs/transformers/v4.57.1/en/main_classes/trainer
-
-Các mô hình và dữ liệu có điều khoản sử dụng riêng từ nguồn phát hành. Dự đoán của hệ thống chỉ phản ánh mô hình phân loại văn bản, không thay thế xác minh thông tin thực tế.
+[Ba tập CSV](data/raw) · [Bài báo và nguồn dữ liệu](docs/BAI_BAO_VA_MUC_TIEU.md) · [Bản lưu trước khi sắp xếp](archive/README.md)

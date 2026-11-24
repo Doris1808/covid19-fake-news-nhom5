@@ -1,0 +1,11 @@
+{
+  "train_rows": 6420,
+  "val_rows": 2140,
+  "test_rows": 2140,
+  "missing_values_total": 0,
+  "exact_overlap_train_val": 1,
+  "exact_overlap_train_test": 0,
+  "normalized_overlap_train_val_rows": 81,
+  "normalized_overlap_train_test_rows": 75,
+  "test_clean_rows_after_removing_leak": 2065
+}

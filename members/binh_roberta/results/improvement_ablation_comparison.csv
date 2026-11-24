@@ -1,0 +1,4 @@
+Phiên bản,Test Accuracy,Test F1 Weighted,FP (Fake->Real),FN (Real->Fake),Tổng lỗi Test
+"1. RoBERTa gốc (Seed 123, tau=0.50)",0.9775700934579439,0.9775596588319442,33.0,15.0,48.0
+2. Cải tiến A: Threshold Tuning (tau=0.7),0.9775700934579439,0.9775596588319442,33.0,15.0,48.0
+3. Cải tiến B: Clean HTML + Shortcut Dropout,0.9714953271028037,0.9714657999143047,48.0,13.0,61.0
