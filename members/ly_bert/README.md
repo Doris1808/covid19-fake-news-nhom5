@@ -11,6 +11,6 @@ Ly fine-tune `bert-base-uncased` trên ba seed 42, 123 và 2024. Mô hình seed 
 | [Dự đoán ngoài Test](results/external_10_results.csv) | Đúng 5/10 câu |
 | [Cấu hình và trạng thái huấn luyện](seed123) | Tokenizer, config và trainer state của seed 123 |
 
-Trên Colab, notebook đọc ba CSV và `external_10_sentences.csv` từ `MyDrive/BERT_FakeNews`. Khi train, notebook cập nhật thư mục `best_model` trong đó. Dùng thư mục Drive riêng cho lần chạy mới. Gói `Ly_Bert_Full (1).zip` của thành viên có tệp trọng số `best_model/model.safetensors`. Có thể tạo lại checkpoint bằng phần huấn luyện trong notebook.
+Trên Colab, notebook đọc ba CSV và `external_10_sentences.csv` từ `MyDrive/BERT_FakeNews`. Khi train, notebook cập nhật thư mục `best_model` trong đó. Dùng thư mục Drive riêng cho lần chạy mới. Trong [ZIP bản nộp đầy đủ](https://github.com/Doris1808/covid19-fake-news-nhom5/releases/download/v1.0-nop-bai/Nhom5_COVID19_FakeNews_DayDu.zip), thư mục `members/ly_bert/seed123/` có `model.safetensors`, cấu hình và tokenizer của bản Ly đã gửi. Sau khi giải nén, có thể nạp cả mô hình và tokenizer từ thư mục này bằng `AutoModelForSequenceClassification.from_pretrained` và `AutoTokenizer.from_pretrained` với `local_files_only=True`.
 
 [Chuẩn bị dữ liệu và mở notebook](../../docs/HUONG_DAN_CHAY.md) · [So sánh với các phần khác](../../reports/README.md)

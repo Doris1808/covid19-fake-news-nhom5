@@ -1,6 +1,6 @@
 # Cách mở và chạy lại bài nhóm 5
 
-Để đọc bài, mở [trang chính](../README.md), chọn notebook rồi cuộn đến các bảng kết quả. Các output đã lưu hiển thị ngay trên GitHub. Gói [ZIP mã nguồn](https://github.com/Doris1808/covid19-fake-news-nhom5/archive/refs/heads/main.zip) chứa cả ba tập dữ liệu tại [data/raw](../data/raw) và [10 câu minh họa](../data/external_10_sentences.csv).
+Để đọc bài, mở [trang chính](../README.md), chọn notebook rồi cuộn đến các bảng kết quả. Các output đã lưu hiển thị ngay trên GitHub. Gói [ZIP đầy đủ](https://github.com/Doris1808/covid19-fake-news-nhom5/releases/download/v1.0-nop-bai/Nhom5_COVID19_FakeNews_DayDu.zip) có sẵn checkpoint BERT seed 123 trong `members/ly_bert/seed123/`. Gói [ZIP mã nguồn](https://github.com/Doris1808/covid19-fake-news-nhom5/archive/refs/heads/main.zip) chứa cả ba tập dữ liệu tại [data/raw](../data/raw) và [10 câu minh họa](../data/external_10_sentences.csv).
 
 | Phần | Môi trường và dữ liệu đầu vào | Khi chạy lại |
 |---|---|---|

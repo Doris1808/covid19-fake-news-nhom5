@@ -27,6 +27,6 @@ Bổ sung n-gram ký tự nâng F1 macro của SVM từ **0,9503** lên **0,9611
 
 - **Xem phần DistilBERT của Quân** bằng chế độ `xem` để đọc ba seed trên CPU. [Mở trên Colab](https://colab.research.google.com/github/Doris1808/covid19-fake-news-nhom5/blob/main/members/quan_distilbert/02_DistilBERT.ipynb) · [Phiên Kaggle gốc đã lưu output](members/quan_distilbert/minh_chung/Phien_Kaggle_seed42.ipynb)
 - **Chạy lại các thí nghiệm** theo hướng dẫn dữ liệu, GPU và checkpoint của từng thành viên. [Hướng dẫn chạy](docs/HUONG_DAN_CHAY.md)
-- **Tải toàn bộ mã nguồn, dữ liệu và minh chứng** trong một file. [Tải ZIP từ GitHub](https://github.com/Doris1808/covid19-fake-news-nhom5/archive/refs/heads/main.zip)
+- **Tải bản nộp đầy đủ** gồm bốn phần, dữ liệu, minh chứng và trọng số BERT của Ly. [Tải một file ZIP](https://github.com/Doris1808/covid19-fake-news-nhom5/releases/download/v1.0-nop-bai/Nhom5_COVID19_FakeNews_DayDu.zip) · [Bản nhẹ chỉ có mã nguồn, dữ liệu và output](https://github.com/Doris1808/covid19-fake-news-nhom5/archive/refs/heads/main.zip)
 
 [Ba tập CSV](data/raw) · [Bài báo và nguồn dữ liệu](docs/BAI_BAO_VA_MUC_TIEU.md) · [Bản lưu trước khi sắp xếp](archive/README.md)
