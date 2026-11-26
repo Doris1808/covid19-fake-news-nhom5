@@ -192,6 +192,8 @@ def examples_panel():
 
 
 def source_panel():
+    st.markdown("[Mở phiên Streamlit trên máy chủ để thử BERT và BART](https://mybinder.org/v2/gh/Doris1808/covid19-fake-news-nhom5/e18caafd06513f946245311f30212e7214b8bfed?urlpath=demo%2F)")
+    st.caption("Binder khởi động một máy chủ riêng. Lần đầu chọn BERT, máy chủ tải bản nộp 410 MB chứa checkpoint seed 123 của Ly. BART tải trọng số từ Hugging Face khi được chọn.")
     descriptions = [
         "Khảo sát dữ liệu, tiền xử lý, chọn C cho SVM, thử n-gram ký tự và so sánh với BART-MNLI.",
         "Ba seed fine-tune, cách chọn checkpoint bằng Validation và phân tích kết quả Test.",

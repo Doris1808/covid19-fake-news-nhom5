@@ -4,6 +4,14 @@ Giảng viên hướng dẫn **ThS. Trần Thị Thanh Thảo**
 
 Nhóm so sánh cách phân loại bài đăng tiếng Anh thành hai nhãn `fake` và `real` trên bộ CONSTRAINT@AAAI2021. Có **6.420 bài Train**, **2.140 bài Validation** và **2.140 bài Test**.
 
+## Demo Streamlit
+
+[**Mở demo trên trình duyệt**](https://share.stlite.net/#https://github.com/Doris1808/covid19-fake-news-nhom5/blob/streamlit-demo/demo/streamlit_app.py) · [Chạy phiên Streamlit trên Binder](https://mybinder.org/v2/gh/Doris1808/covid19-fake-news-nhom5/e18caafd06513f946245311f30212e7214b8bfed?urlpath=demo%2F)
+
+Bản trình duyệt dùng hai mô hình SVM đã fit trên 6.420 bài Train theo notebook của Huy, đối chiếu kết quả trên 2.140 bài Test, và hiển thị số liệu đã lưu cho BART, DistilBERT, BERT và RoBERTa. Tab **Mã nguồn** dẫn đến cả bốn notebook. SVM cho điểm quyết định có dấu.
+
+Phiên Streamlit trên máy chủ có thêm lựa chọn BERT seed 123 từ ZIP bản nộp chính thức và BART-MNLI. Nếu đã gắn checkpoint của nhóm, đặt biến môi trường `NHOM5_DISTILBERT` hoặc `NHOM5_ROBERTA` để bật suy luận tương ứng. Chạy từ thư mục gốc bằng `streamlit run demo/streamlit_app.py` sau khi cài các thư viện của dự án.
+
 ## Bốn phần của đồ án
 
 Mở **Xem bài** để đọc code và output ngay trên GitHub. Cột cuối dẫn tới số liệu của từng phần.
